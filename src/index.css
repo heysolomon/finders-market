@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -50,8 +47,13 @@ p{
  */
 
 h1 {
+  font-family: Poppins;
   font-size: 2em;
   margin: 0.67em 0;
+}
+
+h2,h3,h4,h5,h6 {
+  font-family: Poppins;
 }
 
 /* Grouping content
@@ -359,3 +361,9 @@ template {
 [hidden] {
   display: none;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+@layer base */
