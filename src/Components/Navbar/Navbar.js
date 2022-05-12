@@ -2,11 +2,10 @@
 import { Link } from "react-router-dom";
 import logo from '../../Assets/Images/logo.png'
 import { Button } from "../UI/Button/Button";
-// import classes from './navbar.module.css'
 
 const Navbar = () => {
     return(
-        <nav className="w-full py-[15px]">
+        <nav className="w-full py-[15px] bg-[#4F7F19]">
             <div className="flex justify-between items-center max-w-[1040px] px-[10px] my-0 mx-auto">
                 <Link to="/" className="">
                     <img className="w-[50px]" src={logo} alt="" />
