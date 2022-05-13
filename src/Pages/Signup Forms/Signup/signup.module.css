@@ -1,0 +1,33 @@
+.signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1040px;
+    margin: 80px auto 150px auto;
+    color: #555;
+}
+
+.signup a{
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.signup p {
+    margin-bottom: 30px;
+}
+.signup button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    background-color: #4F7F19;
+}
+
+.signup button:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,85 @@
+.firstcontainer{
+
+    background-color: white;
+    align-items: center;
+    margin: 0  auto;
+    margin:  20px;
+    padding: 100px;
+    width: 25%;
+    transition: 0.3s;
+   
+
+  
+}
+.firstcontainer:hover{
+    transition: 0.3s;
+    box-shadow: 4px 4px 6px rgb(124, 124, 124);
+
+  
+}
+
+
+.track-container{  
+    display: flex;
+    justify-content: center;
+    background-color: #E5E5E5;
+    padding: 60px  0px;
+    width: 100%;
+
+  
+} 
+
+.sec-container{
+    width: 100%;
+    
+    background-color: white;
+}
+
+.box{
+    margin: 0 auto;
+
+    /* max-width: 1040px; */
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+.set-boxes{
+    width: 40%;
+   
+}
+
+
+.contain{
+    background-color: #4F7F19;
+    color: whitesmoke;
+    display: flex; 
+    align-items: center;
+    margin:  20px;
+    padding: 50px;
+    transition: 0.3s;
+
+    
+  
+   
+}
+.contain:hover{
+        opacity: .8;
+    margin:  20px;
+    padding: 50px;
+    box-shadow: 4px 4px 6px rgb(124, 124, 124);
+
+  
+   
+}
+
+
+
+.logistic-h2{
+    margin: 1rem;
+}
+
+
+
+

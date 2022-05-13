@@ -1,0 +1,109 @@
+.header {
+    background-color: #4F7F19;
+    width: 100%;
+}
+/* Navbar */
+.navbar {
+    padding: 15px 0;
+    width: 100%;
+    background-color: #4F7F19;
+}
+/* container */
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 auto;
+    width: 1040px;
+}
+/* logo */
+.nav-brand img {
+    width: 50px;
+}
+
+/* nav items */
+.nav-items{
+    display: flex;
+    flex-direction: row;
+    /* padding: 0; */
+}
+.nav-items{
+    list-style: none;
+}
+
+.nav-items a {
+    font-family: Poppins;
+    font-size: 16px;
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+/* Sign in */
+.signin {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.signin button {
+    font-family: Poppins;
+    font-size: 18px;
+    color: #fff;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    background-color: #7dd145;
+}
+
+.signin a .signup {
+    font-family: Poppins;
+    font-size: 18px;
+    color: #fff;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    background-color: transparent;
+}
+.signin button:hover{
+    cursor: pointer;
+}
+
+/* hero section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: auto;
+    max-width: 1040px;
+    margin: 0 auto;
+    height: 570px;
+    background-image: url('../../Assets/Images/header-pic.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #4F7F19;
+}
+
+.hero .cta {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* width: 100%; */
+    text-align: right;
+}
+
+.hero .cta h1{
+    /* font-family: Poppins; */
+    font-size: 48px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.hero .cta p{
+    font-family: Poppins;
+    font-size: 18px;
+    color: #c9c9c9;
+    width: 65%;
+}
+

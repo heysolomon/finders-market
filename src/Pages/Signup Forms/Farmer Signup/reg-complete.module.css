@@ -1,0 +1,30 @@
+.complete{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1040px;
+    margin: 80px auto;
+    color: #4F7F19;
+}
+.complete h1 {
+    margin: 0 0 20px 0;
+}
+.complete h2{
+    margin: 40px 0 20px 0;
+}
+.complete img{
+    width: 200px;
+}
+
+.complete button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 30%;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    background-color: #4F7F19;
+}
