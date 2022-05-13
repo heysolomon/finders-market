@@ -1,0 +1,125 @@
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.cart {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-family: Poppins;
+    width: 1040px;
+    margin: 80px auto 80px auto;
+}
+
+.cart-product {
+    padding: 0 10px 0 0;
+}
+
+.cart-product h3{
+    margin-top: 0;
+    color: #4F7F19;
+}
+.cart-product .product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-item img {
+    background-color: #C4C4C4;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.product-item-quantity input{
+    width: 50px;
+}
+
+/* Payment Summary */
+
+.payment-summary {
+    padding: 0 0 0 10px;
+    width: 100%;
+}
+
+.payment-summary .summary{
+    border: 1px solid #C4C4C4;
+    width: 100%;
+    height: 350px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.payment-summary h3{
+    margin-top: 0;
+    color: #4F7F19;
+}
+
+.summary-div {
+    width: 100%;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #C4C4C4;
+}
+
+.sum-total {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+}
+
+.sum-total h4{
+    margin-bottom: 0;
+}
+
+.sum-total button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    background-color: #4F7F19;
+}
+
+.form-field {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #C4C4C4;
+}
+
+.form-field input{
+    width: 90%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+}
+
+.form-field input:focus-visible{
+    outline: none;
+}
+
+
+.product-items-delivery .drivers-list {
+    height: 37px;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #c4c4c4;
+}
+
+
+
+/* .product-items-delivery select:focus-visible{
+   border: 0px !important;
+} */

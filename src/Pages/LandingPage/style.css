@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&family=Poppins:wght@500&display=swap');
+
+.landing-page {
+    background-color: #c4c4c4;
+}
+.products-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 50px auto 0 auto;
+    padding-bottom: 80px;
+    max-width: 1040px;
+    background-color: #c4c4c4;
+}
+ 
+.products-list .product {
+    margin: 20px 0;
+    width: 220px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px rgb(124, 124, 124);
+    transition: ease 0.8s;
+}
+.products-list .product:hover{
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+.product-details {
+    border-radius: 0 0 10px 10px;
+    display: block;
+    
+    background-color: #fff;
+    padding: 10px;
+}
+
+.product button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 60%;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    background-color: #4F7F19;
+}
+
+.product-img {
+    padding: 0;
+    height: 150px;
+}
+
+.product-img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.product-categories img, .products-list img {
+    width: 100%;
+}
+
+.product-details h3 {
+    font-family: Poppins;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+    /*  margin: -4px auto 0 auto; */
+}
+
+.product-details p {
+    font-family: Poppins;
+    color: #555;
+    margin: 10px 0;
+}
+
+p span {
+    font-family: Poppins;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+}
+
+.landing-page a{
+    color: #000;
+    text-decoration: none;
+}
+
+/* Products Categories */
+.product-categories {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.category {
+    margin-right: 50px;
+    width: 100px;
+}
+
+.category p {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #4F7F19;
+}
+
+h2 {
+    font-family: Poppins;
+    font-weight: 500;
+    margin-top: 0;
+    margin-left: 150px;
+}
