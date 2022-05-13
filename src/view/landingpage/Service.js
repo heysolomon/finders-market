@@ -4,7 +4,7 @@ import MiniNav from "../../components/MiniNav";
 const Service = () => {
     return (  
         <div>
-            <MiniNav name="Back" link="./login" />
+            <MiniNav name="Back" link="/login" />
             <div>
                 <h1 className="ml-60 text-5xl">Become a service provider.</h1>
                 <div className="w-3/5 m-auto">
