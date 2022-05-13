@@ -1,0 +1,12 @@
+.container{
+    background: url("../../Assets/Images/footer.png") no-repeat center / cover;
+    padding: 120px;
+    position: relative;
+}
+input:focus{
+    outline: none;
+}
+input .footersearch{
+    background-color: transparent;
+
+}
