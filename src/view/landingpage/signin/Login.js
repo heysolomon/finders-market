@@ -1,6 +1,6 @@
 import human from '../../../Assets/Images/human.png'
-import eyeslash from '../../../Assets/Images/eye-slash.png'
-import eyes from '../../../Assets/Images/showeye.png'
+// import eyeslash from '../../../Assets/Images/eye-slash.png'
+// import eyes from '../../../Assets/Images/showeye.png'
 import { Link } from 'react-router-dom';
 import Password from '../../../components/Password';
 import MiniNav from '../../../components/MiniNav';
@@ -14,7 +14,7 @@ const Login = () => {
  <MiniNav name="Sign In" link="/service"/>
             <div className='flex justify-evenly mt-40 items-center'>
             <div>
-                <img src={human}   />
+                <img alt="" src={human} />
             </div>
             <div className='w-1/3 shadow-md p-20'>
                 <input className='text-md block px-5 py-4 rounded-lg w-full 

@@ -11,7 +11,7 @@ const EmailVari = () => {
                 focus:placeholder-gray-500 w-1/3 m-auto mt-40">
          <div className="text-center">
                 <h1 className="text-green-600 my-10">Verify Your Email.</h1>
-                <p className="text-xl w-4/6 m-auto">Hi, Hassan. Enter Verificstion code sent to your email.</p>
+                <p className="text-xl w-4/6 m-auto">Hi, Hassan. Enter Verification code sent to your email.</p>
             </div>
             <div className="m-auto w-3/4">
                 <Name placeholder="Enter Verificstion code..." />

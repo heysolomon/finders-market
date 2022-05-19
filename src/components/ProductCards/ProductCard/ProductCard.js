@@ -12,9 +12,10 @@ const ProductCard = ({ productPrice, productName, productSize, productImg, descr
         productImg: productImg,
         productId: productId
     }
+
     
     return(
-        <div className="w-[80%] h-[300px] rounded-lg my-2 bg-[white] shadow-[#ccc] shadow-md cursor-pointer hover:scale-105 transition ease-in-out duration-150">
+        <div className="w-[85%] h-[300px] rounded-lg my-2 bg-[white] shadow-[#ccc] shadow-md cursor-pointer hover:scale-105 transition ease-in-out duration-150">
             <div className="w-full h-[50%] mb-2">
                 <img className="w-full h-full object-cover rounded-t-lg" src={require(`../../../${productImg}`)} alt="product-img" />
             </div>
@@ -22,7 +23,7 @@ const ProductCard = ({ productPrice, productName, productSize, productImg, descr
             <p className="m-2">{productPrice} per {productSize}</p>
             <div className="pl-2 flex items-center">
                 <Button 
-                className="disabled:bg-[#c4c4c4]"
+                className="disabled:bg-[#c4c4c4] text-sm"
                 color="white" width="50%" 
                 background="#4F7F19"
                 disabled={ items.find(item => product.id === item.id) ? true : false}

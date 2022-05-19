@@ -1,9 +1,10 @@
-// import {useState} from 'react'
-// import productList from '../../../data/products.json'
+import { useCart } from "react-use-cart";
 import search from '../../../Assets/Images/search-icon.png'
 import classes from './search.module.css'
 
 const  Search = () => {
+    const { items } = useCart();
+    console.log(items)
     // const [query, setQuery] = useState("");
     return(
         <div className={classes.search}>

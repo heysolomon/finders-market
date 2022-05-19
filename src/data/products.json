@@ -14,7 +14,8 @@
             "price": "8000",
             "size": "crate",
             "img": "Assets/Images/eggs.png",
-            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits."
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
         },
         {
             "id": 3,

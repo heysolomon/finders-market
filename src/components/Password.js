@@ -14,7 +14,7 @@ const Password = (props) => {
                 focus:bg-white 
                 focus:border-gray-600  
                 focus:outline-none' id='myInput'  type="password" placeholder={props.placeholder} required />
-                    <img id='show'src={eyeslash}  />
+                    <img id='show'src={eyeslash} alt="" />
                 </div>
 
         </div>

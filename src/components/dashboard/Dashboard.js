@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import prof from './dashimg/dot.png'
+// import prof from './dashimg/dot.png'
 import Data from './Data.json'
 const Dashboard = () => {
     return (

@@ -15,7 +15,7 @@ const StorageSignin = () => {
             <div className='mt-20 flex justify-evenly mt- items-center'>
             <div>
                 <h1 className='text-4xl w-4/6'>Lease your storage space.</h1>
-                <img src={house}  className="w-10/12"  />
+                <img alt="" src={house}  className="w-10/12"  />
             </div>
             <div className='w-1/3 shadow-md p-20'>
              

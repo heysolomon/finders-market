@@ -6,7 +6,7 @@ const Space = () => {
     return ( 
         <div>
             <MiniNav name="Back" link="/storageSignin" />
-            <div className="w-2/6 m-auto mt-10 text-md block px-5 py-4 rounded-lg w-full 
+            <div className="w-2/6 m-auto mt-10 text-md block px-5 rounded-lg
                 bg-white 
                  py-10">
                 <Dropdown label="Storage Type" />

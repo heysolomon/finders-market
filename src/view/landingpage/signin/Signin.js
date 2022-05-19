@@ -7,17 +7,13 @@ import Password from '../../../components/Password';
 const Signin = () => {
     
     return ( 
-
         <div>
-         
-
-
             <form>
                  <MiniNav name="Log In" link="/login"/>
             <div className='flex justify-evenly mt- items-center'>
             <div>
                 <h1 className='text-4xl w-4/6'>Sell Your Farm Produce Or Livestock.</h1>
-                <img src={signlogo}  className="w-10/12"  />
+                <img alt="" src={signlogo}  className="w-10/12"  />
             </div>
             <div className='w-1/3 shadow-md p-20'>
              
