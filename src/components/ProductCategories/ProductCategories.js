@@ -31,8 +31,8 @@ export default function ProductCategories() {
 
     return (
       <>
-      <h2 className="font-bold text-xl ml-4">Popular Categories</h2>
-        <div className="w-full flex justify-center">
+      <h2 className="font-bold text-xl ml-4 mt-10">Popular Categories</h2>
+        <div className="w-full flex justify-start">
           <div className="flex w-[70%] h-full justify-around">
             {productCategories.map(product => 
                 (<ProductCategory key={product.id} productName={product.name} productImg={product.img} />)

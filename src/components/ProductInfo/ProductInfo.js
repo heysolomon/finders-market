@@ -1,5 +1,15 @@
+import { useCart } from "react-use-cart";
+// import { useState } from "react";
+import { Button } from "../UI/Button/Button";
+// import CartButton from "../UI/Button/CartButton";
 
 export default function ProductInfo({productDetails}) {
+    // const [isClicked, setIsClicked] = useState(false)
+    // const handleClick = () => setIsClicked(!isClicked)
+
+    const { items, addItem } = useCart();
+
+
     return(
         <div className="px-10 py-8 z-10 bg-[white] fixed max-w-[1000px] w-[1000px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-sm">
                 <div className="flex justify-around items-center">
@@ -14,11 +24,20 @@ export default function ProductInfo({productDetails}) {
                         <div>
                             <p className="font-semibold text-xl my-3">Price: <span>{productDetails.productPrice}</span></p>
                         </div>
-                        <div className="border border-[black] w-[200px] flex p-1 justify-between items-center rounded-md">
-                            <button className="p-2 w-[35px] h-[30px] bg-[#4F7F19] text-[white] text-xl font-semibold flex justify-center items-center rounded-sm">&#8722;</button>
-                            <span>1</span>
-                            <button className="p-2 w-[35px] h-[30px] bg-[#4F7F19] text-[white] text-xl font-semibold flex justify-center items-center rounded-sm">&#43;</button>
-                        </div>
+                        <Button 
+                            className="disabled:bg-[#c4c4c4]"
+                            color="white" width="50%" 
+                            background="#4F7F19"
+                            onClick={() => addItem(items)}
+                            disabled={ items.find(item => productDetails.productId === item.id) ? true : false}
+                            >
+                            {
+                                items.find(item => productDetails.productId === item.id) ?
+                                <span>Added to Cart</span>
+                                :
+                                <span>Add to Cart</span>
+                            }
+                        </Button>
                     </div>
                 </div>
             </div>
