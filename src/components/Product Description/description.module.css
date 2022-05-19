@@ -1,0 +1,7 @@
+.container {
+    grid-template-columns: 1fr 2fr;
+}
+
+h1{
+    font-family: Poppins;
+}

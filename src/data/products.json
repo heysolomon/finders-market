@@ -1,87 +1,109 @@
 [
-    {
-        "id": 1,
-        "name": "Cocoyams",
-        "price": "N8000",
-        "size": "bag",
-        "img": "../Assets/Images/cocoyam.png"
-    },
-    {
-        "id": 2,
-        "name": "Eggs",
-        "price": "N8000",
-        "size": "crate",
-        "img": "../Assets/Images/eggs.png"
-    },
-    {
-        "id": 3,
-        "name": "Green peas",
-        "price": "N8000",
-        "size": "bag",
-        "img": "../Assets/Images/green-peas.png"
-    },
-    {
-        "id": 4,
-        "name": "Corn",
-        "price": "N8000",
-        "size": "bag",
-        "img": "../Assets/Images/grains.png"
-    },
-    {
-        "id": 5,
-        "name": "Carrots",
-        "price": "N8000",
-        "size": "bag",
-        "img": "../Assets/Images/carrots.png"
-    },
-    {
-        "id": 6,
-        "name": "Cat fishes",
-        "price": "N8000",
-        "size": "bag",
-        "img": "../Assets/Images/fishes.png"
-    },
-    {
-        "id": 7,
-        "name": "Cocoyams",
-        "price": "N8000",
-        "size": "bag",
-        "img": "../Assets/Images/cocoyam.png"
-    },
-    {
-        "id": 8,
-        "name": "Eggs",
-        "price": "N8000",
-        "size": "crate",
-        "img": "../Assets/Images/eggs.png"
-    },
-    {
-        "id": 9,
-        "name": "Green peas",
-        "price": "N8000",
-        "size": "bag",
-        "img": "../Assets/Images/green-peas.png"
-    },
-    {
-        "id": 4,
-        "name": "Corn",
-        "price": "N8000",
-        "size": "bag",
-        "img": "../Assets/Images/grains.png"
-    },
-    {
-        "id": 10,
-        "name": "Carrots",
-        "price": "N8000",
-        "size": "bag",
-        "img": "../Assets/Images/carrots.png"
-    },
-    {
-        "id": 11,
-        "name": "Cat fishes",
-        "price": "N8000",
-        "size": "bag",
-        "img": "../Assets/Images/fishes.png"
-    }
-
-]
+        {
+            "id": 1,
+            "name": "Cocoyams",
+            "price": "8000",
+            "size": "bag",
+            "img": "Assets/Images/cocoyam.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
+        },
+        {
+            "id": 2,
+            "name": "Eggs",
+            "price": "8000",
+            "size": "crate",
+            "img": "Assets/Images/eggs.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits."
+        },
+        {
+            "id": 3,
+            "name": "Green peas",
+            "price": "8000",
+            "size": "bag",
+            "img": "Assets/Images/green-peas.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
+        },
+        {
+            "id": 4,
+            "name": "Corn",
+            "price": "8000",
+            "size": "bag",
+            "img": "Assets/Images/corn.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
+        },
+        {
+            "id": 5,
+            "name": "Carrots",
+            "price": "8000",
+            "size": "bag",
+            "img": "Assets/Images/carrots.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
+        },
+        {
+            "id": 6,
+            "name": "Cat fishes",
+            "price": "8000",
+            "size": "bag",
+            "img": "Assets/Images/fishes.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
+        },
+        {
+            "id": 7,
+            "name": "Cocoyams",
+            "price": "8000",
+            "size": "bag",
+            "img": "Assets/Images/cocoyam.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
+        },
+        {
+            "id": 8,
+            "name": "Eggs",
+            "price": "8000",
+            "size": "crate",
+            "img": "Assets/Images/eggs.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
+        },
+        {
+            "id": 9,
+            "name": "Green peas",
+            "price": "8000",
+            "size": "bag",
+            "img": "Assets/Images/green-peas.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
+        },
+        {
+            "id": 10,
+            "name": "Corn",
+            "price": "8000",
+            "size": "bag",
+            "img": "Assets/Images/corn.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
+        },
+        {
+            "id": 11,
+            "name": "Carrots",
+            "price": "8000",
+            "size": "bag",
+            "img": "Assets/Images/carrots.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
+        },
+        {
+            "id": 12,
+            "name": "Cat fishes",
+            "price": "8000",
+            "size": "bag",
+            "img": "Assets/Images/fishes.png",
+            "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
+            "quantity": 1
+        }
+    ]

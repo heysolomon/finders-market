@@ -1,0 +1,27 @@
+.paymentDetails {
+    margin: 80px auto;
+    max-width: 1040px;
+}
+
+.form{
+    width: 100%;
+}
+
+/* For the first row */
+.form_row_1{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+/* This is the form field- the div for the label and input */
+.form_field{
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+}
+
+.form_input{
+    border: 0;
+    border-radius: 0px !important;
+    border-bottom: 1px solid #000;
+}
