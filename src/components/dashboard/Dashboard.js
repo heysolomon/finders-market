@@ -1,61 +1,61 @@
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 // import prof from './dashimg/dot.png'
 import Data from './Data.json'
+=======
+import profi from '../../Assets/Images/profi.png'
+import Dashboardsidebar from '../Dashboardsidebar';
+import Dashboardtopbar from '../Dashboardtopbar';
+import InputWithLabel from '../InputWithLabel';
+import Button from "../Button";
+
+
+>>>>>>> d04bf61befa301c2dabf2ec1b95da152f12da140
 const Dashboard = () => {
     return (
         <div>
-         <div>
-          <div className='block'>
 
-                        <table  className='w-2/3 flex items-center m-auto p-5 '>
-                                <tr className='flex'>
-                                    <th></th>
-                                    <th>Status</th>
-                                    <th>Amount</th>
+            <div className="">
+            <Dashboardtopbar />
+           <div className="flex ">
+               
+           <div className="">
+           <Dashboardsidebar />
+           </div >
 
-                                </tr>
-                        </table>
-                {
-                        Data.map(Data => {
-                    return(
 
-                        <div className='w-2/3 items-center m-auto p-5 flex '>
-                            <table className='flex'>
-                            
-                                <tr className=''>
-                                    <td>
-                                    <p className='text-2xl w-80 text-green-600'>{Data.name}</p>
-                                    <td><p className='text-l'>{Data.date}</p></td>
-                                    </td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td> <Link className='border-2 p-2 border-green-600 text-2xl rounded' to="" >{Data.conbtn}</Link></td>
-                                </tr>
-                                <tr>
-                                    <p className='text-2xl'>{Data.amount}</p>
-                                </tr>
-                            </table>
+  
+               
+                <div className="w-4/6 mt-20 m-auto " >
+                  
+                   <div className="mt-10">
+
+                   <div className='flex items-center'>
+                   <div className='mr-10'>
+                    <img src={profi}/>
+                    </div>
+                    <div>
+                        <p className='text-2xl'>Tijani Bitrus</p>
+                        <p className='text-[#4F7F19]'>Change profile picture.</p>
+                    </div>
+                   </div  >
+                <form className='w-3/6'>
+                    <div className='flex justify-between  w-full'>
+                        <div className='mr-10'>
+                            <InputWithLabel  value="Tijani" label="First Name" />
                         </div>
-
-                    )
-                        })
-                    }
-
+                        <InputWithLabel value="Bitrus" label="Last Name" />
+                        </div>
+                        <InputWithLabel label="Email Address"  value="ogatijanibitrus@gmail.com"  />
+                        <InputWithLabel label="Phone Number"  value="09012345689"  />
+                        <Button value="Update Profile" />
+                </form>
+                    </div>
                 </div>
 
-         
-          </div>
-
-
-
-
-
-
-
-         
-
-       
+           </div>
+        </div>
+        
         </div>
       );
 }

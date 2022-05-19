@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../../../components/Button";
 import Dropdown from "../../../components/Dropdown";
 import InputWithLabel from "../../../components/InputWithLabel";
 import MiniNav from "../../../components/MiniNav";
@@ -20,23 +21,17 @@ const Personalinfo = () => {
             </div>
             <div className="mt-10">
               <div className="flex justify-between">
-              <InputWithLabel label="First Name"  placeholder="Enter Frist name..." />
+                <InputWithLabel label="First Name"  placeholder="Enter Frist name..." />
                 <InputWithLabel label="Last Name"  placeholder="Enter Last name..." />
               </div>
-                
                 <InputWithLabel label="Vahicle manufacturer"  placeholder="Enter Vahicle manufacturer..." />
-               <div className="flex justify-between">
-               <InputWithLabel label="License Number"  placeholder="Enter License Number..." />
+              <div className="flex justify-between">
+                <InputWithLabel label="License Number"  placeholder="Enter License Number..." />
                 <InputWithLabel label="License Plate"  placeholder="Enter License Plate..." />
                 
-               </div>
-               
-        
+              </div>
                 <Dropdown label="City" />
-                <Link className='flex justify-center mt-6  bg-[#4f7f19] hover:opacity-80 text-white p-4 rounded ' to="/emailvari" >Next</Link>
-               
-
-
+                <Button value="Next" />
             </div>
          </div>
           

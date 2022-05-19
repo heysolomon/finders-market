@@ -17,61 +17,11 @@ const Footer = () => {
                     </div>
 
             </div>
-            <Dashboard />
-
-
-
-            
-            <div className="flex justify-between pb-20 pt-8 px-8  bg-[#4F7F19] text-white">
-           
-                    {/* <div className="flex justify-between ">
-                            <div >
-                                <img src={footerlogo} />
-                            </div>
-
-                    <div>
-                        <div className="flex justify-around border-b-2 py-0 px-2.5 items-center border-white">
-                                <ul className="flex">
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                </ul>
-                                    <input type="text" />
-
-                        </div>
-                                <ul className="flex">
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                    <li className="m-5"><Link to="" >About</Link></li>
-                                </ul>
-                    </div>
-
-                    <div className=" flex justify-around">
-                            <Link className="m-2" to="/" ><img src={instagram}/></Link>
-                            <Link className="m-2" to="/" ><img src={instagram}/></Link>
-                            <Link className="m-2" to="/" ><img src={instagram}/></Link>
-            
-                    </div>
-
-                    </div>
-
-                </div> */}
-            </div>
         </div>
      );
 }
  
 export default Footer;
-
-
 
 
 
