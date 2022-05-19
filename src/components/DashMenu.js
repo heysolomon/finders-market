@@ -7,7 +7,7 @@ const DashMenu = (props) => {
             <div className="items-center  flex flex-col  p-5 px-12 rounded bg-white placeholder-gray-600 shadow-md
         focus:placeholder-gray-500 w-full mx-10 hover:bg-[#D9FF99] ;
         ] ">
-            <img src={props.img}  className="mb-5 w-5" />
+            <img src={props.img} className="mb-5 w-5" alt="" />
             <p>{props.name}</p>
         </div>
       </Link>
