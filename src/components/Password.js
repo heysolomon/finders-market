@@ -26,16 +26,10 @@ const Password = (props) => {
                     <input className='focus:placeholder-gray-500
                 focus:bg-white 
                 focus:border-gray-600  
-<<<<<<< HEAD
-                focus:outline-none' id='myInput'  type="password" placeholder={props.placeholder} required />
-                    <img id='show'src={eyeslash} alt="" />
-                </div>
-=======
                 focus:outline-none' id='myInput'  type={state ? "text" : "password"} placeholder={props.placeholder} required />
-                    <img onClick={togglebtn} id='show'src={state ? eye : eyeslash}  />
+                    <img onClick={togglebtn} id='show'src={state ? eye : eyeslash} alt=""  />
             </div>
             </div>
->>>>>>> d04bf61befa301c2dabf2ec1b95da152f12da140
 
      );
 }

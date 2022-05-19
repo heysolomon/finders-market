@@ -1,6 +1,6 @@
 import {  useCart } from "react-use-cart";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 // import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";

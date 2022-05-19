@@ -1,7 +1,7 @@
 // import { Link } from "react-router-dom";
 // import instagram from "../../Assets/Images/instagram.png"
 // import footerlogo from "../../Assets/Images/logo.png"
-import Dashboard from "../dashboard/Dashboard";
+// import Dashboard from "../dashboard/Dashboard";
 import footer from "./footer.module.css"
 
 const Footer = () => {

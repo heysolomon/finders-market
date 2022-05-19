@@ -1,8 +1,4 @@
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-// import prof from './dashimg/dot.png'
-import Data from './Data.json'
-=======
+// import { Link } from 'react-router-dom';
 import profi from '../../Assets/Images/profi.png'
 import Dashboardsidebar from '../Dashboardsidebar';
 import Dashboardtopbar from '../Dashboardtopbar';
@@ -10,7 +6,6 @@ import InputWithLabel from '../InputWithLabel';
 import Button from "../Button";
 
 
->>>>>>> d04bf61befa301c2dabf2ec1b95da152f12da140
 const Dashboard = () => {
     return (
         <div>
@@ -32,7 +27,7 @@ const Dashboard = () => {
 
                    <div className='flex items-center'>
                    <div className='mr-10'>
-                    <img src={profi}/>
+                    <img src={profi} alt="" />
                     </div>
                     <div>
                         <p className='text-2xl'>Tijani Bitrus</p>

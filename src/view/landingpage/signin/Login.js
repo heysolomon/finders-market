@@ -16,11 +16,7 @@ const Login = () => {
             <MiniNav name="Sign In" link="/service"/>
             <div className='flex justify-evenly mt-40 items-center'>
             <div>
-<<<<<<< HEAD
-                <img alt="" src={human} />
-=======
-                <img src={human} className="w-10/12"   />
->>>>>>> d04bf61befa301c2dabf2ec1b95da152f12da140
+                <img src={human} className="w-10/12" alt='' />
             </div>
                 <form className='w-1/3 shadow-md p-10'>
                     <Input type="email" placeholder="Email address.." />
