@@ -8,14 +8,16 @@ import Button from "../Button";
 const Dashboard = () => {
   return (
     <div>
-      <div className="w-screen">
-        <Dashboardtopbar />
+      <div className="">
+        <div className="fixed z-10 bg-white w-full">
+          <Dashboardtopbar />
+        </div>
         <div className="flex ">
-          <div className="w-[20%]">
+          <div className="fixed left-0 top-20 ">
             <Dashboardsidebar />
           </div>
 
-          <div className="w-[80%] mt-20 m-auto  ">
+          <div className="w-4/6 mt-[10%] ml-[25%] m-auto ">
             <div className="mt-10">
               <div className="flex items-center">
                 <div className="mr-10">

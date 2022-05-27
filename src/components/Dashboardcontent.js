@@ -33,8 +33,7 @@ const Dashboardcontent = () => {
   ];
 
   return (
-   <div className="">
-      <div className="flex w-[100%] justify-around ">
+    <div className="flex w-10/12 justify-around   ">
       {topmenu.map((topmenu) => (
         <DashMenu
           key={topmenu.id}
@@ -44,7 +43,6 @@ const Dashboardcontent = () => {
         />
       ))}
     </div>
-   </div>
   );
 };
 

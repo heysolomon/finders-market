@@ -27,7 +27,7 @@ const Dashboardsidebar = () => {
     },
     {
       id: 4,
-      link: "#",
+      link: "/storage",
       img: warehouse,
       name: "Storage",
     },
@@ -40,7 +40,7 @@ const Dashboardsidebar = () => {
   ];
 
   return (
-    <div className="p-5 mt-[50px] bg-[#bbef92] w-full h-screen fixed">
+    <div className="p-5 h-srceen pb-60 bg-[#bbef92] ">
       {btn.map((btn) => (
         <Dashbtn key={btn.id} link={btn.link} name={btn.name} img={btn.img} />
       ))}

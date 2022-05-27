@@ -11,13 +11,13 @@ const Dropdown = (props) => {
             focus:outline-none"
         name="cars"
       >
-        <option value="mercedes">items-1</option>
-        <option value="mercedes">items-2</option>
-        <option value="mercedes">items-3</option>
-        <option value="mercedes">items-4</option>
-        <option value="mercedes">items-5</option>
-        <option value="mercedes">items-6</option>
-        <option value="mercedes">items-7</option>
+        <option value="mercedes">111111</option>
+        <option value="mercedes">111112</option>
+        <option value="mercedes">111113</option>
+        <option value="mercedes">111114</option>
+        <option value="mercedes">111115</option>
+        <option value="mercedes">111116</option>
+        <option value="mercedes">111117</option>
       </select>
     </div>
   );

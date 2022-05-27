@@ -8,17 +8,19 @@ import InputWithLabel from "../../components/InputWithLabel";
 const Farmer = () => {
   return (
     <div className="w-screen">
-      <Dashboardtopbar />
-      <div>
-        <div >
-          <Dashboardsidebar className="w-[20%]" />
+      <div className="fixed z-10 bg-white w-full">
+        <Dashboardtopbar />
+      </div>
+      <div className="flex ">
+        <div className="fixed left-0 top-20 ">
+          <Dashboardsidebar />
         </div>
-        <div className="">
-          <form className="">
-           <div className="fixed mt-[8%]">
-           <Dashboardcontent />
-           </div>
-            <div className="flex ">
+
+        <div className="ml-[25%] mt-40">
+          <Dashboardcontent />
+
+          <form className="mt-10">
+            <div className="flex">
               <div className="mr-10 w-2/6">
                 <Dropdown label="Categories" />
                 <Dropdown label="Categories" />
@@ -31,7 +33,6 @@ const Farmer = () => {
               </div>
             </div>
           </form>
-
         </div>
       </div>
     </div>

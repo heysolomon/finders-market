@@ -6,6 +6,11 @@ import FormExample from "./Pages/Examples/FormExample";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import Congrate from "./view/Congrate";
 import Farmer from "./view/dashboard/Farmer";
+import Storage from "./view/dashboard/Storage";
+
+import Logistic from "./view/dashboard/Logistic";
+
+
 import Notification from "./view/dashboard/Notification";
 import Personalinfo from "./view/landingpage/logisticreg/Personalinfo";
 import VehicleReg from "./view/landingpage/logisticreg/VehicleReg";
@@ -20,6 +25,8 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Wallet from "./components/dashboard/Wallet";
 // import Dashboardsidebar from "./components/Dashboardsidebar";
 import BookingForm from "./view/BookingForm";
+// import User from "./view/landingpage/signin/User";
+
 
 function App() {
   const [cartItem, setCartItem] = useState(1);
@@ -46,6 +53,8 @@ function App() {
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/farmer" element={<Farmer />} />
             <Route path="/booking" element={<BookingForm />} />
+            <Route path="/storage" element={<Storage />} />
+            <Route path="/logistic" element={<Logistic />} />
           </Routes>
         </div>
       </CartItemContext.Provider>
