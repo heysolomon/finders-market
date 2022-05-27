@@ -10,18 +10,17 @@ const Farmer = () => {
         <div>
 
         <div className="">
-        <Dashboardtopbar />
+       <div  className="fixed z-10 bg-white w-full">
+       <Dashboardtopbar />
+       </div>
        <div className="flex ">
            
-       <div className="">
+       <div className="fixed left-0 top-20 ">
        <Dashboardsidebar />
        
        </div >
 
-
-
-           
-            <div className="w-full mt-20" >
+            <div className="ml-[25%] mt-40" >
             <Dashboardcontent />
 
                     <form className='mt-10'>

@@ -3,6 +3,7 @@ import search from '../Assets/Images/search.png'
 import profi from '../Assets/Images/profi.png'
 
 import Logo from './Logo';
+import { Link } from 'react-router-dom';
 
 
 const Dashboardtopbar = () => {
@@ -15,13 +16,15 @@ const Dashboardtopbar = () => {
                 <Logo />
 
            <div className='flex items-center '>
-           <div className='flex items-center mr-40'>
+          <Link to="/LandingPage">
+          <div className='flex items-center mr-40'>
                     <img src={arrowleft} />
                     <p className='text-xl'>Back</p>
-            </div>    
+            </div>   
+              </Link> 
             
             <div className='flex items-center justify-between border-2 px-5  py-2 rounded'>
-                <input type="text" placeholder='search...' />
+                <input className='focus:outline-none' type="search" placeholder='search...' />
                 <img src={search} />
             </div>
            

@@ -38,7 +38,7 @@ const Dashboardcontent = () => {
     ] 
 
     return ( 
-        <div className="flex w-10/12 justify-around  ">
+        <div className="flex w-10/12 justify-around   ">
             {
                 topmenu.map((topmenu) =>(
                  

@@ -9,13 +9,13 @@ const Dropdown = (props) => {
             focus:bg-white 
             focus:border-gray-600  
             focus:outline-none" name="cars">
-                <option value="mercedes">choise-1</option>
-                <option value="mercedes">choise-2</option>
-                <option value="mercedes">choise-3</option>
-                <option value="mercedes">choise-4</option>
-                <option value="mercedes">choise-5</option>
-                <option value="mercedes">choise-6</option>
-                <option value="mercedes">choise-7</option>     
+                <option value="mercedes">111111</option>
+                <option value="mercedes">111112</option>
+                <option value="mercedes">111113</option>
+                <option value="mercedes">111114</option>
+                <option value="mercedes">111115</option>
+                <option value="mercedes">111116</option>
+                <option value="mercedes">111117</option>     
             </select>
          </div>
 

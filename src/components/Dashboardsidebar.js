@@ -30,7 +30,7 @@ const Dashboardsidebar = () => {
         },
         {
             id:4,
-            link: "#",
+            link: "/storage",
             img: warehouse,
             name: "Storage",
 
@@ -45,7 +45,7 @@ const Dashboardsidebar = () => {
     ]
 
     return ( 
-        <div className="p-5 ">
+        <div className="p-5 h-srceen pb-60 bg-[#bbef92] ">
                 
                
           {

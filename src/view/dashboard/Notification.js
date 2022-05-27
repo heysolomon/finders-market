@@ -66,15 +66,18 @@ const Notification = () => {
 
     return ( 
                 <div className="">
+                  <div  className="fixed z-10 bg-white w-full">
                     <Dashboardtopbar />
+                    </div>
                     <div className="flex ">
-                
-                        <div className="">
-                            <Dashboardsidebar />
-                        </div >
+                        
+                    <div className="fixed left-0 top-20 ">
+                    <Dashboardsidebar />
+                    
+                    </div >
 
 
-                        <div className="mt-10 w-4/6 mt-20 m-auto">
+                        <div className="mt-[10%] ml-[25%] w-4/6 mt-20 m-auto">
                             <label className="text-2xl">Notifications</label>
                       <div className="scroll-dg">
                       <div className="scroll-div">
