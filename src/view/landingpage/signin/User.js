@@ -1,65 +1,155 @@
-import { Link } from 'react-router-dom';
-import person from '../../../Assets/Images/person.png'
-import Button from '../../../components/Button';
-import InputWithLabel from '../../../components/InputWithLabel';
-import Logo from '../../../components/Logo';
-import Password from '../../../components/Password';
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+
+import { Link } from "react-router-dom";
+import AuthButton from "../../../components/UI/Button/AuthButton";
+import { TextField } from "../../../components/UI/FormInput/TextField";
 const User = () => {
-    return ( 
-        <div className='flex  '>
-            <div className='bg-[#4f7f19] p-4  w-2/4 h-screen '>
-                <Logo />
-                <div className=' ' >
-                    <h1 className='w-2/4 m-auto text-5xl text-white'>Shop for your food items from the convinience of your home.</h1>
-                    <img className='m-auto w-4/6  ' src={person}  />
-                </div>
+  const inputs = [
+    {
+      id: 1,
+      label: "First Name",
+      name: "firstName",
+      type: "text",
+      placeholder: "Peter",
+    },
+    {
+      id: 2,
+      label: "Last Name",
+      name: "lastName",
+      type: "text",
+      placeholder: "Adamson",
+    },
+    {
+      id: 3,
+      label: "Address",
+      name: "address",
+      type: "text",
+      placeholder: "Enter your home address",
+    },
+    {
+      id: 4,
+      label: "Phone Number",
+      name: "phone_number",
+      type: "text",
+      placeholder: "09068433658",
+    },
+    {
+      id: 5,
+      label: "State",
+      name: "state",
+      type: "text",
+      placeholder: "Abuja, NG",
+    },
+    {
+      id: 6,
+      label: "Email",
+      name: "email",
+      type: "email",
+      placeholder: "example@mail.com",
+    },
+    {
+      id: 7,
+      label: "Password",
+      name: "password",
+      type: "password",
+      placeholder: "Enter your password",
+    },
+    {
+      id: 8,
+      label: "Confirm Password",
+      name: "confirmPassword",
+      type: "password",
+      placeholder: "Confirm Password",
+    },
+  ];
+  const validate = Yup.object({
+    firstName: Yup.string()
+      .min(3, "Must be 3 characters or more")
+      .required("Required"),
+    lastName: Yup.string()
+      .min(3, "Must be 3 characters or more")
+      .required("Required"),
+    address: Yup.string()
+      .max(30, "Must be 30 characters or less")
+      .required("Required"),
+    phone_number: Yup.number()
+      .positive("Must be a positive number")
+      .integer()
+      // .moreThan(11, "Must be 11 characters or more")
+      // .lessThan(11, "Must be 11 characters or more")
+      .required("Required"),
+    email: Yup.string().email("Email is invalid").required("Email is required"),
+    password: Yup.string()
+      .min(6, "Password must be atleast 6 characters long")
+      .required("Password is required"),
+    confirmPassword: Yup.string()
+      .oneOf([Yup.ref("password"), null], "Password must match")
+      .required("Confirm Password is required"),
+  });
 
-            </div>
-            <div className='w-2/4 '>
-                <div className='flex justify-between items-center mx-10 mt-5'>
-                    <h2 className='text-[#4f7f19] text-4xl '>Create account</h2>
-                    <p>Already have an account?<Link  className='text-[#4f7f19] text-xl hover:text-gray-800 ' to="/login" > Sign in</Link></p>
-                </div>
-          
-               <form >
-                
-               <div className=' w-5/6 flex mx-10 '>
-               <div className='w-2/4'>
-                <InputWithLabel class="mt-14"  label="Full Name" placeholder="Enter Full Name" />
-                 <InputWithLabel class="mt-14" label="Phone number" type="tel" placeholder="Enter Phone number" />
-                 <InputWithLabel class="mt-14" label="Email Address" type="text" placeholder="Enter Emaill Address" />
-                 <Password class="mt-14"  placeholder="Enter a Password"/>
-                </div>
-                <div className='p-10'>
-
-                </div>
-
-               <div className='w-2/4'>
-               <InputWithLabel class="mt-14" label="Address" type="text" placeholder="Enter Home Address" />
-                 <InputWithLabel class="mt-14" label="State/city" type="text" placeholder="Enter state/city of residence" />
-    
-
-               
-                 <Password class="mt-24" placeholder="Confirm  Password"/>
-           
-               </div>
-             
-               
-               </div>
-               <div className='flex items-center w-5/6  mx-10 justify-between '>
-               <Button class="w-2/4" value="Create account" />
-               <p className='p-9'>or</p>
-               <button className='w-2/4 border-2 p-2 rounded-3xl'>Sign up with Facebook</button>
-               
-               </div>
-
-         </form>
-      
-
-            </div>
+  return (
+    <div className="flex justify-center fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-20 bg-[white] max-h-[90%] rounded-xl">
+      <div className="w-[80%] m-[40px]">
+        <div className="flex justify-between items-center mt-5">
+          <h2 className="text-[#4f7f19] text-md ">Create account</h2>
+          <p className="text-xs">
+            Already have an account?
+            <Link
+              className="text-[#4f7f19] text-xs hover:text-gray-800 "
+              to="/login"
+            >
+              {" "}
+              Sign in
+            </Link>
+          </p>
         </div>
+        <AuthButton clas="text-slate-900 h-[40px]" icon="fa-brands fa-facebook-square mr-2" value="Sign up with Facebook" />
 
-     );
-}
- 
+        <hr className="mt-4" />
+
+        <Formik
+          initialValues={{
+            firstName: "",
+            lastName: "",
+            address: "",
+            phone_number: "",
+            state: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+          }}
+          validationSchema={validate}
+          onSubmit={async (values) => {
+            await new Promise((r) => setTimeout(r, 500));
+            alert(JSON.stringify(values, null, 2));
+          }}
+        >
+          {(formik) => (
+            <Form className="my-5">
+              <div className="grid grid-cols-2 w-full">
+                {inputs.map((input) => (
+                  <TextField
+                    key={input.id}
+                    name={input.name}
+                    type={input.type}
+                    label={input.label}
+                    placeholder={input.placeholder}
+                  />
+                ))}
+              </div>
+
+              <AuthButton
+                clas="w-[60%] h-[40px] bg-[#4f7f19]"
+                type="submit"
+                value="Submit"
+              />
+            </Form>
+          )}
+        </Formik>
+      </div>
+    </div>
+  );
+};
+
 export default User;
