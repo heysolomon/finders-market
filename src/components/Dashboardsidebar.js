@@ -40,7 +40,7 @@ const Dashboardsidebar = () => {
   ];
 
   return (
-    <div className="p-5 h-srceen pb-60 bg-[#bbef92] ">
+    <div className="p-5 h-screen pb-60 bg-[#bbef92] ">
       {btn.map((btn) => (
         <Dashbtn key={btn.id} link={btn.link} name={btn.name} img={btn.img} />
       ))}

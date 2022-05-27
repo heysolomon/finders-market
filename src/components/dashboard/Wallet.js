@@ -9,14 +9,14 @@ const Wallet = () => {
         <Dashboardtopbar />
        <div className="flex ">
            
-       <div className="">
+       <div className="w-[20%] mt-[80px] fixed">
        <Dashboardsidebar />
    
        </div >
 
 
            
-            <div className="w-4/6 mt-20 m-auto" >
+            <div className="m-auto mt-[110px] ml-[300px] pl-[20px]" >
                 <Dashboardcontent/>
                <div className="mt-10">
                     <label className="text-2xl">Tijani Bitrus</label>

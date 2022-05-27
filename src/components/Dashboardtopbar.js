@@ -29,12 +29,12 @@ const Dashboardtopbar = () => {
               <img src={search} alt="" />
             </div>
           </div>
-          <img src={profi} width="50" alt="" />
+          {/* <img src={profi} width="50" alt="" /> */}
 
-          <div className="flex items-center justify-between border-2 px-5  py-2 rounded">
+          {/* <div className="flex items-center justify-between border-2 px-5  py-2 rounded">
             <input type="text" placeholder="search..." />
             <img src={search} alt="" />
-          </div>
+          </div> */}
         </div>
         <img alt="" src={profi} width="50" />
       </div>
