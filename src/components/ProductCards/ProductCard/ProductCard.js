@@ -20,7 +20,7 @@ const ProductCard = ({
     productImg: productImg,
     productId: productId,
   };
-
+  
   return (
     <div className="w-[85%] h-[300px] rounded-lg my-2 bg-[white] shadow-[#ccc] shadow-md cursor-pointer hover:scale-105 transition ease-in-out duration-150">
       <div className="w-full h-[50%] mb-2">

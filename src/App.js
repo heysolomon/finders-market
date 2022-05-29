@@ -25,6 +25,8 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Wallet from "./components/dashboard/Wallet";
 // import Dashboardsidebar from "./components/Dashboardsidebar";
 import BookingForm from "./view/BookingForm";
+import { Checkout } from "./Pages/Checkout/Checkout";
+import { CheckoutSuccess } from "./Pages/Checkout/Success";
 // import User from "./view/landingpage/signin/User";
 
 
@@ -55,6 +57,9 @@ function App() {
             <Route path="/booking" element={<BookingForm />} />
             <Route path="/storage" element={<Storage />} />
             <Route path="/logistic" element={<Logistic />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/checkout/success" element={<CheckoutSuccess />} />
+
           </Routes>
         </div>
       </CartItemContext.Provider>

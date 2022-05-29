@@ -81,11 +81,19 @@ const User = () => {
       .required("Required"),
     email: Yup.string().email("Email is invalid").required("Email is required"),
     password: Yup.string()
-      .min(6, "Password must be atleast 6 characters long")
-      .required("Password is required"),
+      .min(8, "Password must be atleast 8 characters long")
+      .required("Password is required")
+      .matches(
+        /^(?=.*[A-Za-z])(?=.*\d)(?=.*)[A-Za-z\d]{8,}$/,
+        `Must Contain 8 Characters, One Uppercase, One Lowercase,
+        One Number and one special case Character [@$!%*#?&-_]`
+      ),
     confirmPassword: Yup.string()
       .oneOf([Yup.ref("password"), null], "Password must match")
       .required("Confirm Password is required"),
+    privacy: Yup.boolean()
+      .isTrue()
+      .oneOf([true], "The terms and conditions must be accepted."),
   });
 
   return (
@@ -97,14 +105,18 @@ const User = () => {
             Already have an account?
             <Link
               className="text-[#4f7f19] text-xs hover:text-gray-800 "
-              to="/login"
+              to=""
             >
               {" "}
               Sign in
             </Link>
           </p>
         </div>
-        <AuthButton clas="text-slate-900 h-[40px]" icon="fa-brands fa-facebook-square mr-2" value="Sign up with Facebook" />
+        <AuthButton
+          clas="text-slate-900 h-[40px]"
+          icon="fa-brands fa-facebook-square mr-2"
+          value="Sign up with Facebook"
+        />
 
         <hr className="mt-4" />
 

@@ -1,62 +1,23 @@
-import React from 'react'
-import { Formik, Form } from 'formik'
-import { TextField } from '../../components/UI/FormInput/TextField'
-import * as Yup from 'yup'
+import React from "react";
+import { TextField } from "../../components/UI/FormInput/TextField";
 
-export default function FormExample() {
-
-    const validate = Yup.object({
-        firstName: Yup.string()
-        .max(15, 'Must be 15 characters or less')
-        .required('Required'),
-        lastName: Yup.string()
-        .max(20, 'Must be 20 characters or less')
-        .required('Required'),
-        email: Yup.string()
-        .email('Email is invalid')
-        .required('Email is required'),
-        password: Yup.string()
-        .min(6, 'Password must be atleast 6 characters long')
-        .required('Password is required'),
-        confirmPassword: Yup.string()
-        .oneOf([Yup.ref('password'), null], 'Password must match')
-        .required('Confirm Password is required'),
-    })
-
-    const inputs = [
-        {
-            id: 1,
-            label: "",
-            name: "",
-            type: ""
-        }
-    ]
-    
+const FormExample = () => {
   return (
-    <Formik
-    initialValues={{
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-        confirmPassword: ''
-    }}
-    validationSchema = {validate}
-    >
-        {formik => (
-            <div>
-                <h1 className="text-5xl">Form</h1>
-                <Form>
-                    <TextField width="w-[40px]" label="First Name" name="firstName" type="text" />
-                    <TextField label="Last Name" name="lastName" type="text" />
-                    <TextField label="Email" name="email" type="email" />
-                    <TextField label="Password" name="password" type="password" />
-                    <TextField label="Confirm Password" name="confirmPassword" type="password" />
-                    <button type="submit">Register</button>
-                    <button type="reset">Reset</button>
-                </Form>
-            </div>
-        )}
-    </Formik>
-  )
-}
+    <div className="grid grid-cols-2">
+      <TextField
+        width="w-full h-[34px]"
+        label="First Name"
+        type="text"
+        placeholder="Max"
+      />
+      <TextField
+        label="First Name"
+        type="text"
+        placeholder="Max"
+        width="w-full h-[34px]"
+      />
+    </div>
+  );
+};
+
+export default FormExample;
