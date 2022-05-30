@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Button from "../../../components/Button";
 import Dropdown from "../../../components/Dropdown";
 import InputWithLabel from "../../../components/InputWithLabel";
@@ -9,7 +9,7 @@ const VehicleReg = () => {
     return ( 
         <div>
             <MiniNav name="Back" link="/service" />
-            <div className="w-2/5 m-auto mt-10 text-md block px-5 py-4 rounded-lg w-full 
+            <div className=" m-auto mt-10 text-md block px-5 rounded-lg w-full 
                     bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md
                     focus:placeholder-gray-500
                     focus:bg-white 

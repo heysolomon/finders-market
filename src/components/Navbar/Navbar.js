@@ -27,7 +27,7 @@ const Navbar = ({ showInfo, showLogin }) => {
             </Link>
           </li>
           <li className="mr-3 text-white">
-            <Link to="/storage" className="nav-item">
+            <Link to="/storage-page" className="nav-item">
               Storage
             </Link>
           </li>

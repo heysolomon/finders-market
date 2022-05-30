@@ -10,7 +10,6 @@ import Storage from "./view/dashboard/Storage";
 
 import Logistic from "./view/dashboard/Logistic";
 
-
 import Notification from "./view/dashboard/Notification";
 import Personalinfo from "./view/landingpage/logisticreg/Personalinfo";
 import VehicleReg from "./view/landingpage/logisticreg/VehicleReg";
@@ -27,9 +26,9 @@ import Wallet from "./components/dashboard/Wallet";
 import BookingForm from "./view/BookingForm";
 import { Checkout } from "./Pages/Checkout/Checkout";
 import { CheckoutSuccess } from "./Pages/Checkout/Success";
-import { Facilities } from "./components/Storage/Facilities";
+import { Facilities } from "./Pages/Storage/StoragePage/Facilities";
+import { StorageBooking } from "./Pages/Storage/Bookings/BookingForm";
 // import User from "./view/landingpage/signin/User";
-
 
 function App() {
   const [cartItem, setCartItem] = useState(1);
@@ -61,7 +60,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/checkout/success" element={<CheckoutSuccess />} />
             <Route path="/storage-page" element={<Facilities />} />
-
+            <Route path="/storage-page/booking" element={<StorageBooking />} />
           </Routes>
         </div>
       </CartItemContext.Provider>
