@@ -20,8 +20,8 @@ const Login = () => {
       </div>
       <AuthButton
         clas="text-slate-900 h-[40px]"
-        icon="fa-brands fa-facebook-square mr-2"
-        value="Sign in with Facebook"
+        icon="fa-brands fa-google mr-2"
+        value="Sign in with Google"
       />
 
       <hr className="mt-4 w-full mb-8" />

@@ -114,8 +114,8 @@ const User = () => {
         </div>
         <AuthButton
           clas="text-slate-900 h-[40px]"
-          icon="fa-brands fa-facebook-square mr-2"
-          value="Sign up with Facebook"
+          icon="fa-brands fa-google mr-2"
+          value="Sign up with Google"
         />
 
         <hr className="mt-4" />
