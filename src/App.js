@@ -27,6 +27,7 @@ import Wallet from "./components/dashboard/Wallet";
 import BookingForm from "./view/BookingForm";
 import { Checkout } from "./Pages/Checkout/Checkout";
 import { CheckoutSuccess } from "./Pages/Checkout/Success";
+import { Facilities } from "./components/Storage/Facilities";
 // import User from "./view/landingpage/signin/User";
 
 
@@ -59,6 +60,7 @@ function App() {
             <Route path="/logistic" element={<Logistic />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/checkout/success" element={<CheckoutSuccess />} />
+            <Route path="/storage-page" element={<Facilities />} />
 
           </Routes>
         </div>

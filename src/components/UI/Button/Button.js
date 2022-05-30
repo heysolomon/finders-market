@@ -12,3 +12,16 @@ export const Button = styled.button`
     background-color: ${(props) => props.background};
 
 `
+
+export const BorderButton = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* #4F7F19 */
+    padding: 10px;
+    color: ${(props) => props.color};
+    border: ${(props) => props.border};
+    border-radius: 5px;
+    background-color: ${(props) => props.background};
+
+`

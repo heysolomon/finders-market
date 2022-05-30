@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "price": 10000,
+        "size": "per square feet every week.",
+        "spaceLeft": 80,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.",
+        "image": "Assets/Images/space.png"
+    },
+    {
+        "id": 2,
+        "price": 10000,
+        "size": "per square feet every week.",
+        "spaceLeft": 10,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.",
+        "image": "Assets/Images/space.png"
+    },
+    {
+        "id": 3,
+        "price": 10000,
+        "size": "per square feet every week.",
+        "spaceLeft": 16,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.",
+        "image": "Assets/Images/space.png"
+    },
+    {
+        "id": 4,
+        "price": 10000,
+        "size": "per square feet every week.",
+        "spaceLeft": 20,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.",
+        "image": "Assets/Images/space.png"
+    },
+    {
+        "id": 5,
+        "price": 10000,
+        "size": "per square feet every week.",
+        "spaceLeft": 70,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.",
+        "image": "Assets/Images/space.png"
+    },
+    {
+        "id": 6,
+        "price": 10000,
+        "size": "per square feet every week.",
+        "spaceLeft": 8,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.",
+        "image": "Assets/Images/space.png"
+    },
+    {
+        "id": 7,
+        "price": 10000,
+        "size": "per square feet every week.",
+        "spaceLeft": 44,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.",
+        "image": "Assets/Images/space.png"
+    },
+    {
+        "id": 8,
+        "price": 10000,
+        "size": "per square feet every week.",
+        "spaceLeft": 65,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.",
+        "image": "Assets/Images/space.png"
+    }
+]
