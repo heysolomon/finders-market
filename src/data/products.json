@@ -6,7 +6,8 @@
             "size": "bag",
             "img": "Assets/Images/cocoyam.png",
             "description": "Cocoyam is a perennial, tropical plant primarily grown as a root vegetable. It can grow to a height of 1.3 to 2.5 metres.  Cocoyam is rich in vitamin A, B1, B2, B3, B4, B5, B6, B9, C, E and K. It also contains minerals such as calcium, iron, magnesium, potassium, sodium, zinc, carbon, manganese and selenium. Cocoyam has more nutrients than other root and tuber crops.",
-            "quantity": 1
+            "quantity": 1,
+            "category": "roots/tubers"
         },
         {
             "id": 2,
@@ -24,7 +25,8 @@
             "size": "bag",
             "img": "Assets/Images/green-peas.png",
             "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
-            "quantity": 1
+            "quantity": 1,
+            "category": "vegetables"
         },
         {
             "id": 4,
@@ -33,7 +35,8 @@
             "size": "bag",
             "img": "Assets/Images/corn.png",
             "description": "Maize is the most produced cereal crop in the world and the most adapted to different ecosystems.",
-            "quantity": 1
+            "quantity": 1,
+            "category": "grains"
         },
         {
             "id": 5,
@@ -42,7 +45,8 @@
             "size": "bag",
             "img": "Assets/Images/carrots.png",
             "description": "Carrot is a biennial root vegetable often said to be the perfect health food. Carrots are found in many colours, include yellow, white, red, purple and orange (the most popular) and they are all domesticated forms of the wild carrot. Carrots are low in calories but rich in carotene which gives it the typical orange colour (beta-carotene), calcium, iron, potassium, sodium, biotin and lutein. It is also a very rich source of vitamin A (contains 184% of your daily value per serving), B6, C and K.",
-            "quantity": 1
+            "quantity": 1,
+            "category": "vegetables"
         },
         {
             "id": 6,
@@ -51,7 +55,8 @@
             "size": "bag",
             "img": "Assets/Images/fishes.png",
             "description": "Catfish are a diverse group of fish, named for their prominent barbels, which resembles a cats whiskers. Catfish have no scales and also not all catfish have whiskers or barbels. There two major species found in Nigeria: Clarias spp (common in the east) and Heterobranchus spp (common in the west). Catfish are a great source of nutrients such as vitamin B12 sodium, selenium, protein, healthy fats (omega-3 and omega-6 fatty acids) and they are also low in calories.",
-            "quantity": 1
+            "quantity": 1,
+            "category": "fish"
         },
         {
             "id": 7,
@@ -60,7 +65,8 @@
             "size": "bag",
             "img": "Assets/Images/cocoyam.png",
             "description": "Cocoyam is a perennial, tropical plant primarily grown as a root vegetable. It can grow to a height of 1.3 to 2.5 metres.  Cocoyam is rich in vitamin A, B1, B2, B3, B4, B5, B6, B9, C, E and K. It also contains minerals such as calcium, iron, magnesium, potassium, sodium, zinc, carbon, manganese and selenium. Cocoyam has more nutrients than other root and tuber crops.",
-            "quantity": 1
+            "quantity": 1,
+            "category": "roots/tubers"
         },
         {
             "id": 8,
@@ -78,7 +84,8 @@
             "size": "bag",
             "img": "Assets/Images/green-peas.png",
             "description": "Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits. Lorem Ipsum Dolor Simut Ignus, Fraks Logik Donor Lits.",
-            "quantity": 1
+            "quantity": 1,
+            "category": "vegetables"
         },
         {
             "id": 10,
@@ -87,7 +94,8 @@
             "size": "bag",
             "img": "Assets/Images/corn.png",
             "description": "Maize is the most produced cereal crop in the world and the most adapted to different ecosystems.",
-            "quantity": 1
+            "quantity": 1,
+            "category": "grains"
         },
         {
             "id": 11,
@@ -96,7 +104,8 @@
             "size": "bag",
             "img": "Assets/Images/carrots.png",
             "description": "Carrot is a biennial root vegetable often said to be the perfect health food. Carrots are found in many colours, include yellow, white, red, purple and orange (the most popular) and they are all domesticated forms of the wild carrot. Carrots are low in calories but rich in carotene which gives it the typical orange colour (beta-carotene), calcium, iron, potassium, sodium, biotin and lutein. It is also a very rich source of vitamin A (contains 184% of your daily value per serving), B6, C and K.",
-            "quantity": 1
+            "quantity": 1,
+            "category": "vegetables"
         },
         {
             "id": 12,
@@ -105,6 +114,7 @@
             "size": "bag",
             "img": "Assets/Images/fishes.png",
             "description": "Catfish are a diverse group of fish, named for their prominent barbels, which resembles a cats whiskers. Catfish have no scales and also not all catfish have whiskers or barbels. There two major species found in Nigeria: Clarias spp (common in the east) and Heterobranchus spp (common in the west). Catfish are a great source of nutrients such as vitamin B12 sodium, selenium, protein, healthy fats (omega-3 and omega-6 fatty acids) and they are also low in calories.",
-            "quantity": 1
+            "quantity": 1,
+            "category": "fish"
         }
     ]

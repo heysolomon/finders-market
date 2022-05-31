@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
-import { CartItemContext } from "./Helper/Context";
+import { ProductsContext } from "./Helper/Context";
 import Cart from "./Pages/Cart/Cart";
 import FormExample from "./Pages/Examples/FormExample";
 import LandingPage from "./Pages/LandingPage/LandingPage";
@@ -28,13 +28,14 @@ import { Checkout } from "./Pages/Checkout/Checkout";
 import { CheckoutSuccess } from "./Pages/Checkout/Success";
 import { Facilities } from "./Pages/Storage/StoragePage/Facilities";
 import { StorageBooking } from "./Pages/Storage/Bookings/BookingForm";
+import productsList from './data/products.json'
 // import User from "./view/landingpage/signin/User";
 
 function App() {
-  const [cartItem, setCartItem] = useState(1);
+  const [products, setProducts] = useState(productsList);
   return (
     <BrowserRouter>
-      <CartItemContext.Provider value={{ cartItem, setCartItem }}>
+      <ProductsContext.Provider value={{ products, setProducts }}>
         <div className="App">
           <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -63,7 +64,7 @@ function App() {
             <Route path="/storage-page/booking" element={<StorageBooking />} />
           </Routes>
         </div>
-      </CartItemContext.Provider>
+      </ProductsContext.Provider>
     </BrowserRouter>
   );
 }
