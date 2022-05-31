@@ -30,6 +30,7 @@ import { Facilities } from "./Pages/Storage/StoragePage/Facilities";
 import { StorageBooking } from "./Pages/Storage/Bookings/BookingForm";
 import productsList from './data/products.json'
 import { BookingSuccess } from "./Pages/Storage/Bookings/Success/BookingSuccess";
+import { LogisticsPage } from "./Pages/Logistics/Logistics";
 // import User from "./view/landingpage/signin/User";
 
 function App() {
@@ -64,6 +65,8 @@ function App() {
             <Route path="/storage-page" element={<Facilities />} />
             <Route path="/storage-page/booking" element={<StorageBooking />} />
             <Route path="/storage-page/booking/success" element={<BookingSuccess />} />
+            <Route path="/logistics-page" element={<LogisticsPage />} />
+
           </Routes>
         </div>
       </ProductsContext.Provider>

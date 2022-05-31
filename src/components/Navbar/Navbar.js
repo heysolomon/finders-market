@@ -22,7 +22,7 @@ const Navbar = ({ showInfo, showLogin }) => {
             </Link>
           </li>
           <li className="mr-3 text-white">
-            <Link to="/logistics" className="nav-item">
+            <Link to="/logistics-page" className="nav-item">
               Logistics
             </Link>
           </li>
