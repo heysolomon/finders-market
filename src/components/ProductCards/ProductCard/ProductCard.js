@@ -36,7 +36,7 @@ const ProductCard = ({
       </p>
       <div className="pl-2 flex items-center">
         <Button
-          className="disabled:bg-[#c4c4c4] text-sm"
+          className="disabled:bg-[#c4c4c4] text-xs"
           color="white"
           width="50%"
           background="#4F7F19"
