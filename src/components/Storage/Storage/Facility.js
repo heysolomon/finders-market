@@ -1,6 +1,7 @@
-import facilities from "../../data/facilities.json";
-import { Button, BorderButton } from "../../components/UI/Button/Button";
+import facilities from "../../.././data/facilities.json";
+import { Button, BorderButton } from "../.././UI/Button/Button";
 import Progressbar from "react-js-progressbar";
+import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 
 export const Facility = () => {
@@ -10,6 +11,8 @@ export const Facility = () => {
 //     setPercentage(50);
 //   };
 
+let navigate = useNavigate()
+
   return (
     <div className="w-full grid grid-cols-4">
       {facilities.map((item) => (
@@ -17,7 +20,7 @@ export const Facility = () => {
           <div className="w-full">
             <img
               className="w-full rounded-t-md"
-              src={require(`../../${item.image}`)}
+              src={require(`../../../${item.image}`)}
               alt=""
             />
           </div>
@@ -46,6 +49,7 @@ export const Facility = () => {
             <Button
               className="text-[white] text-xs w-[100px]"
               background="#4F7F19"
+              onClick={() => navigate("/storage-page/booking")}
             >
               Book
             </Button>

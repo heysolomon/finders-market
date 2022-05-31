@@ -4,7 +4,7 @@ import User from "../../../view/landingpage/signin/User";
 import Footer from "../../../components/footer/Footer";
 import Header from "../../../components/Header/Header";
 import Modal from "../../../components/UI/Modal/Modal";
-import { Facility } from "../../../components/Storage/Facility";
+import { Facility } from "../../../components/Storage/Storage/Facility";
 
 export const Facilities = () => {
   const [showSignUp, setShowSignUp] = useState(false);
