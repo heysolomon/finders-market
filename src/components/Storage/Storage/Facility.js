@@ -1,17 +1,17 @@
 import facilities from "../../.././data/facilities.json";
 import { Button, BorderButton } from "../.././UI/Button/Button";
 import Progressbar from "react-js-progressbar";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 
-export const Facility = () => {
+export const Facility = ({openBookings}) => {
 //   const [percentage, setPercentage] = useState(item.spaceLeft);
 
 //   const change_progressbar_input = () => {
 //     setPercentage(50);
 //   };
 
-let navigate = useNavigate()
+// let navigate = useNavigate()
 
   return (
     <div className="w-full grid grid-cols-4">
@@ -49,7 +49,7 @@ let navigate = useNavigate()
             <Button
               className="text-[white] text-xs w-[100px]"
               background="#4F7F19"
-              onClick={() => navigate("/storage-page/booking")}
+              onClick={openBookings}
             >
               Book
             </Button>

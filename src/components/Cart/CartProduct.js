@@ -1,8 +1,6 @@
 // import { connect } from "react-redux";
 import { Button } from "../UI/Button/Button";
 import CartButton from "../UI/Button/CartButton";
-// import { adjustQty, removeFromCart} from '../../redux/Shopping/shopping-actions'
-// import ItemQuantity from "./ItemQuantity";
 
 const CartProduct = ({ products, removeItem, isEmpty, updateItemQuantity }) => {
   return (
@@ -22,7 +20,7 @@ const CartProduct = ({ products, removeItem, isEmpty, updateItemQuantity }) => {
               <div className="product-item-img flex items-center">
                 <img
                   className="h-[50px] w-[50px] mr-[10px]"
-                  src={require(`../../${product.img}`)}
+                  src={product.img}
                   alt=""
                 />
                 <p>{product.name}</p>

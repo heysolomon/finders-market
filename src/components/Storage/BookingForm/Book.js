@@ -2,15 +2,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BusinessDetails } from "./Steps/BusinessDetails";
-import { PersonalDetails } from "./Steps/PersonalDetails";
+// import { PersonalDetails } from "./Steps/PersonalDetails";
 
 export const Book = () => {
   const [data, setData] = useState({
-    firstName: "",
-    secondName: "",
-    email: "",
-    confirmEmail: "",
-    phoneNumber: "",
+   
     businessName: "",
     address: "",
     city: "",
@@ -48,12 +44,12 @@ export const Book = () => {
 
   // set bring in the steps
   const steps = [
-  <PersonalDetails next={handleNextStep} data={data} />, 
+  // <PersonalDetails next={handleNextStep} data={data} />, 
   <BusinessDetails next={handleNextStep} prev={handlePrevStep} data={data} />
 ];
 
   return (
-    <div className="w-[50%] shadow-2xl rounded-3xl mt-[30px] mx-auto px-10 py-10 ">
+    <div className="w-full mt-[30px] mx-auto px-10 py-10 ">
       {steps[currentStep]}
     </div>
   );

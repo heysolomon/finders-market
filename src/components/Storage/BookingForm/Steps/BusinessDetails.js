@@ -22,7 +22,7 @@ export const BusinessDetails = (props) => {
       >
         {({ values }) => (
           <Form className="w-full">
-            <h2 className="text-md text-left mb-5">Business Details</h2>
+            {/* <h2 className="text-md text-left mb-5">Business Details</h2> */}
             <div className="mb-[40px]">
               <TextField
                 name="businessName"
@@ -63,12 +63,12 @@ export const BusinessDetails = (props) => {
               />
             </div>
             <div className="flex justify-between w-full">
-              <AuthButton
+              {/* <AuthButton
                 clas="w-[175px] bg-[#4f7f19] h-[37px] justify-start"
                 value="Back"
                 type="button"
                 onClick={() => props.prev(values)}
-              />
+              /> */}
 
               <AuthButton
                 clas="w-[175px] bg-[#4f7f19] h-[37px] justify-end"

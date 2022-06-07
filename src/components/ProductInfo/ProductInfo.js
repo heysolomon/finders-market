@@ -14,7 +14,7 @@ export default function ProductInfo({productDetails}) {
         <div className="px-10 py-8 z-10 bg-[white] fixed max-w-[1000px] w-[1000px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-sm">
                 <div className="flex justify-around items-center">
                     <div className="h-[270px] w-[250px]">
-                        <img className="w-full h-full object-cover" src={require(`../../${productDetails.productImg}`)} alt="product-img" />
+                        <img className="w-full h-full object-cover" src={productDetails.productImg} alt="product-img" />
                     </div>
                     <div className="w-[40%]">
                         <h2 className="font-semibold text-2xl my-3">Description</h2>

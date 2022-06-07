@@ -29,10 +29,12 @@ const Cart = () => {
     setShowLogin(false);
   };
   const openSignUpModal = () => {
+    setShowLogin(false);
     setShowSignUp(true);
   };
 
   const openLoginModal = () => {
+    setShowSignUp(false);
     setShowLogin(true);
   };
 
@@ -40,13 +42,13 @@ const Cart = () => {
     <div>
       <Navbar showInfo={openSignUpModal} showLogin={openLoginModal} />
       {showSignUp && (
-        <Modal closeModal={closeModal}>
-          <User />
+        <Modal closeModal={closeModal} >
+          <User showLogin={openLoginModal} />
         </Modal>
       )}
       {showLogin && (
         <Modal closeModal={closeModal}>
-          <Login />
+          <Login showInfo={openSignUpModal} />
         </Modal>
       )}
       <div className={classes.cart}>

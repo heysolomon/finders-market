@@ -31,24 +31,26 @@ const LandingPage = () => {
     setShowLogin(false);
   };
   const openSignUpModal = () => {
+    setShowLogin(false)
     setShowSignUp(true);
   };
 
   const openLoginModal = () => {
+      setShowSignUp(false)
       setShowLogin(true)
   }
 
   return (
     <div className="w-screen">
-      <Header showInfo={openSignUpModal} showLogin={openLoginModal} />
+      <Header showInfo={openSignUpModal}/>
       {showSignUp && (
-        <Modal closeModal={closeModal}>
-          <User />
+        <Modal closeModal={closeModal} >
+          <User showLogin={openLoginModal} />
         </Modal>
       )}
       {showLogin && (
         <Modal closeModal={closeModal}>
-          <Login />
+          <Login showInfo={openSignUpModal} />
         </Modal>
       )}
       <div className="max-w-[1040px] mx-auto w-screen">

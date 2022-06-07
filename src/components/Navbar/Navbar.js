@@ -3,17 +3,15 @@ import { useCart } from "react-use-cart";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Button } from "../UI/Button/Button";
+import logo from '../../Assets/Images/finders-logo.png'
 
-const Navbar = ({ showInfo, showLogin }) => {
+const Navbar = ({ showInfo }) => {
   const { totalUniqueItems } = useCart();
   return (
     <nav className="w-full py-[15px] bg-[#4F7F19] fixed z-10 top-0">
       <div className="flex justify-between items-center max-w-[1040px] px-[10px] my-0 mx-auto">
         <Link to="/" className="">
-          <button class="bg-[#4f7f19]  flex items-center p-1  rounded-md">
-            <p class="text-black text-xl">Finders</p>
-            <p class="text-white text-xl">market</p>
-          </button>
+          <img className="w-[50px]" src={logo} alt="" />
         </Link>
         <ul className="flex">
           <li className="mr-3 text-white">
@@ -47,12 +45,7 @@ const Navbar = ({ showInfo, showLogin }) => {
             </Button>
           </Link>
           <Link to="">
-            <Button onClick={showLogin} background="#7DD145" color="white">
-              Sign in
-            </Button>
-          </Link>
-          <Link to="">
-            <Button onClick={showInfo} background="transparent" color="white">
+            <Button onClick={showInfo} background="#7DD145" color="white">
               Sign up
             </Button>
           </Link>

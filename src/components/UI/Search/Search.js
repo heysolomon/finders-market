@@ -1,10 +1,10 @@
-import { useCart } from "react-use-cart";
+// import { useCart } from "react-use-cart";
 import search from '../../../Assets/Images/search-icon.png'
 import classes from './search.module.css'
 
 const  Search = () => {
-    const { items } = useCart();
-    console.log(items)
+    // const { items } = useCart();
+    // console.log(items)
     // const [query, setQuery] = useState("");
     return(
         <div className={classes.search}>

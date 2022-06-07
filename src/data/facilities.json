@@ -11,7 +11,7 @@
         "id": 2,
         "price": 10000,
         "size": "per square feet every week.",
-        "spaceLeft": 100,
+        "spaceLeft": 20,
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.",
         "image": "Assets/Images/space.png"
     },

@@ -26,7 +26,7 @@ const ProductCard = ({
       <div className="w-full h-[50%] mb-2">
         <img
           className="w-full h-full object-cover rounded-t-lg"
-          src={require(`../../../${productImg}`)}
+          src={productImg}
           alt="product-img"
         />
       </div>
