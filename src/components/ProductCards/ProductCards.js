@@ -1,10 +1,11 @@
 // import { connect } from "react-redux";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useContext } from "react";
 import ProductCard from "./ProductCard/ProductCard";
+import { ProductsContext } from "../../Helper/Context";
 
 const ProductCards = ({ showInfo }) => {
-  const [products, setProducts] = useState([]);
+  const {products, setProducts} = useContext(ProductsContext);
   const fetchProducts = () => {
     axios
       .get("https://morning-headland-70594.herokuapp.com/products")

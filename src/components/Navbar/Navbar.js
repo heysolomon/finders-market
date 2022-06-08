@@ -3,15 +3,15 @@ import { useCart } from "react-use-cart";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Button } from "../UI/Button/Button";
-import logo from '../../Assets/Images/finders-logo.png'
+import logo from '../../Assets/Images/finderslogo.png'
 
 const Navbar = ({ showInfo }) => {
   const { totalUniqueItems } = useCart();
   return (
-    <nav className="w-full py-[15px] bg-[#4F7F19] fixed z-10 top-0">
+    <nav className="w-full  bg-[#4F7F19] fixed z-10 top-0">
       <div className="flex justify-between items-center max-w-[1040px] px-[10px] my-0 mx-auto">
         <Link to="/" className="">
-          <img className="w-[50px]" src={logo} alt="" />
+          <img className="w-[200px]" src={logo} alt="" />
         </Link>
         <ul className="flex">
           <li className="mr-3 text-white">

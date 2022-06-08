@@ -4,7 +4,8 @@ import truck from "../../../Assets/Images/truck.png";
 import farmer from "../../../Assets/Images/seedling.png";
 import storage from "../../../Assets/Images/warehouse.png";
 import settings from "../../../Assets/Images/settings.png";
-import Logo from "../../../components/Logo";
+import logo from '../../../Assets/Images/finderslogo.png'
+
 
 const Sidebar = (props) => {
   const navLinkStyles = ({ isActive }) => {
@@ -40,12 +41,12 @@ const Sidebar = (props) => {
   ];
   return (
     <div className=" h-full bg-[#4f7f19] fixed z-40 w-[17%]">
-      <div className="ml-10 pt-5">
-        <Logo />
+      <div className="">
+      <img src={logo} alt="" />
       </div>
 
-      <nav className="mt-6">
-        <div className=" ml-5 mt-10">
+      <nav className="mt-0">
+        <div className=" ml-5 mt-0">
           {links.map((links) => (
             <NavLink
               style={navLinkStyles}

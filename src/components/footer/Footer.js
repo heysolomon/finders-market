@@ -1,4 +1,4 @@
-import footerlogo from '../../Assets/Images/SiteLogo3.svg';
+import footerlogo from '../../Assets/Images/finderslogo.png';
 // import social from '../../Assets/Images/social-1.svg';
 // import social2 from '../../Assets/Images/social-2.svg';
 // import social3 from '../../Assets/Images/social-3.svg';
@@ -76,7 +76,7 @@ const Footer = () => {
       </div>
       <div className={footer.sub_footer}>
         <div className={footer.left}>
-          <img src={footerlogo} alt="" style={{ width: "50px" }} />
+          <img src={footerlogo} alt="" style={{ width: "200px" }} />
         </div>
         <div className={footer.center}>
           <nav className={footer.sub_center}>

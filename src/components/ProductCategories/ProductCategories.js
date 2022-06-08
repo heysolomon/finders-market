@@ -15,26 +15,26 @@ const productCategories = [
       name: "roots & tubers",
       img: "Assets/Images/cocoyam.png"
     },
-    {
-      id: 4,
-      name: "fish",
-      img: "Assets/Images/fishes.png"
-    },
+    // {
+    //   id: 4,
+    //   name: "fish",
+    //   img: "Assets/Images/fishes.png"
+    // },
     {
       id: 5,
       name: "vegetables",
       img: "Assets/Images/carrots.png"
     },
-    {
-      id: 6,
-      name: "fish",
-      img: "Assets/Images/fishes.png"
-    },
-    {
-      id: 7,
-      name: "vegetables",
-      img: "Assets/Images/carrots.png"
-    }
+    // {
+    //   id: 6,
+    //   name: "fish",
+    //   img: "Assets/Images/fishes.png"
+    // },
+    // {
+    //   id: 7,
+    //   name: "vegetables",
+    //   img: "Assets/Images/carrots.png"
+    // }
   ];
 
 export default function ProductCategories() {

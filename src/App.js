@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import { useState } from "react";
 import { ProductsContext, LoginContext } from "./Helper/Context";
 import Cart from "./Pages/Cart/Cart";
@@ -18,7 +18,6 @@ import { Checkout } from "./Pages/Checkout/Checkout";
 import { CheckoutSuccess } from "./Pages/Checkout/Success";
 import { Facilities } from "./Pages/Storage/StoragePage/Facilities";
 import { StorageBooking } from "./Pages/Storage/Bookings/BookingForm";
-import productsList from "./data/products.json";
 import { BookingSuccess } from "./Pages/Storage/Bookings/Success/BookingSuccess";
 import { LogisticsPage } from "./Pages/Logistics/Logistics";
 
@@ -38,10 +37,11 @@ import { Home } from "./Pages/dashboard/Home";
 import Transaction from "./Pages/dashboard/dashboardroutes/Transaction";
 
 function App() {
-  const [products, setProducts] = useState(productsList);
+  const [products, setProducts] = useState([]);
   const [loggedIn, setLoggedIn] = useState(null);
   const [loggingIn, setLoggingIn] = useState(false);
   const [signingIn, setSigningIn] = useState(false);
+
   return (
     <BrowserRouter>
       <ProductsContext.Provider value={{ products, setProducts }}>
@@ -56,7 +56,7 @@ function App() {
           }}
         >
           <div className="App">
-            <Routes>
+            <Routes >
               <Route path="/" element={<LandingPage />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/form" element={<FormExample />} />
@@ -70,7 +70,7 @@ function App() {
               <Route path="/storageSignin" element={<StorageSignin />} />
               <Route path="/space" element={<Space />} />
               <Route path="/work" element={<Work />} />
-              {!loggedIn && (
+              {loggedIn && (
                 <Route path="/dashboard" element={<Dashboard />}>
                   <Route path="" element={<Home />} />
 
@@ -110,6 +110,11 @@ function App() {
               />
               <Route path="/logistics-page" element={<LogisticsPage />} />
             </Routes>
+            {/* {state?.backgroundLocation &&
+              <Routes>
+              
+            </Routes>
+            } */}
           </div>
         </LoginContext.Provider>
       </ProductsContext.Provider>
