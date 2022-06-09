@@ -47,7 +47,7 @@ const Header = (props) => {
             </div>
             <div className="relative p-1 flex items-center justify-end w-1/4 ml-5 mr-4 sm:mr-0 sm:right-auto">
               <Link
-                to="/notifications"
+                to="/notifications"git 
                 onClick={Show}
                 className="block relative"
               >
@@ -55,11 +55,11 @@ const Header = (props) => {
                 <div className={props.Notificationbar}>
                   {newnoti && (
                     <div>
-                      <p className="bg-red-600 absolute top-[-5px] right-[40px] animate-ping text-red-600 rounded-xl px-1">
-                        0
+                      <p className="bg-red-600 absolute top-[-5px] right-[36px] text-sm animate-ping text-red-600 rounded-[50%] px-2">
+                        .
                       </p>
-                      <p className="bg-red-600 absolute top-[-5px] right-[40px]  text-red-600 rounded-xl px-1">
-                        0
+                      <p className="bg-red-600 absolute top-[-5px] text-sm right-[36px] text-red-600 rounded-[50%] px-2">
+                      .
                       </p>
                     </div>
                   )}

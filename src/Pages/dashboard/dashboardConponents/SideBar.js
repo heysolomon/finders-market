@@ -16,25 +16,25 @@ const Sidebar = (props) => {
   const links = [
     {
       id: 1,
-      to: "/dashboard",
+      to: "",
       icon: dash,
       name: "Dashboard",
     },
     {
       id: 2,
-      to: "/dashboard/farmer/farmertrans",
+      to: "farmer/farmertrans",
       icon: farmer,
       name: "Farmer",
     },
     {
       id: 3,
-      to: "/dashboard/logistic/transaction",
+      to: "logistic/transaction",
       icon: truck,
       name: "logistic",
     },
     {
       id: 4,
-      to: "/dashboard/storage",
+      to: "storage",
       icon: storage,
       name: "Storage",
     },

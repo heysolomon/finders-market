@@ -8,7 +8,6 @@ const SelectMenu = (props) => {
         <select className="form-select appearance-none
       block
       w-full
-     
       text-base
       font-normal
       shadow  p-2 text-gray-500 rounded pl-3 focus:outline-none
