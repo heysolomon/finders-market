@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import dash from "../../../Assets/Images/dashlogo.png";
 import truck from "../../../Assets/Images/truck.png";
 import farmer from "../../../Assets/Images/seedling.png";
@@ -41,9 +41,9 @@ const Sidebar = (props) => {
   ];
   return (
     <div className=" h-full bg-[#4f7f19] fixed z-40 w-[17%]">
-      <div className="">
+      <Link to="/">
       <img src={logo} alt="" />
-      </div>
+      </Link>
 
       <nav className="mt-0">
         <div className=" ml-5 mt-0">
