@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 import { useCart } from "react-use-cart";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import CartProduct from "../../components/Cart/CartProduct";
 import PaymentSummary from "../../components/Cart/PaymentSummary";
 
@@ -69,10 +69,11 @@ const Cart = () => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    cart: state.shop.cart,
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     cart: state.shop.cart,
+//   };
+// };
 
-export default connect(mapStateToProps)(Cart);
+// export default connect(mapStateToProps)(Cart);
+export default Cart

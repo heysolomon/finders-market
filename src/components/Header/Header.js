@@ -12,7 +12,7 @@ const Header = ({ showInfo }) => {
         <div></div>
         <div className={classes.cta}>
           <h1>
-            <TypeIt>Welcome to Finders Market</TypeIt>
+          Welcome to <TypeIt>Finders Market</TypeIt>
           </h1>
           <p>
             An online marketplace that aims at eliminating middlemen. It also

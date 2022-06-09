@@ -1,6 +1,6 @@
 import { useCart } from "react-use-cart";
 // import { useEffect, useState } from "react";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Button } from "../UI/Button/Button";
 import logo from '../../Assets/Images/finderslogo.png'
@@ -54,10 +54,11 @@ const Navbar = ({ showInfo }) => {
     </nav>
   );
 };
-const mapStateToProps = (state) => {
-  return {
-    cart: state.shop.cart,
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     cart: state.shop.cart,
+//   };
+// };
 
-export default connect(mapStateToProps)(Navbar);
+// export default connect(mapStateToProps)(Navbar);
+export default Navbar

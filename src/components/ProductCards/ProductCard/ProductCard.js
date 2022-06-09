@@ -20,7 +20,10 @@ const ProductCard = ({
     productImg: productImg,
     productId: productId,
   };
-  
+
+  const {_id:id, productQuantity:quantity, productPrice:price, ...others} = product;
+  const newProduct = {id, quantity, price, ...others};
+
   return (
     <div className="w-[85%] h-[300px] rounded-lg my-2 bg-[white] shadow-[#ccc] shadow-md cursor-pointer hover:scale-105 transition ease-in-out duration-150">
       <div className="w-full h-[50%] mb-2">
@@ -40,10 +43,10 @@ const ProductCard = ({
           color="white"
           width="50%"
           background="#4F7F19"
-          disabled={items.find((item) => product.id === item.id) ? true : false}
-          onClick={() => addItem(product)}
+          disabled={items.find((item) => newProduct.id === item.id) ? true : false}
+          onClick={() => addItem(newProduct)}
         >
-          {items.find((item) => product.id === item.id) ? (
+          {items.find((item) => newProduct.id === item.id) ? (
             <span>Added to Cart</span>
           ) : (
             <span>Add to Cart</span>

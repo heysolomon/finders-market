@@ -135,6 +135,16 @@ const User = ({ showLogin }) => {
     }
   };
 
+  // google register
+  const googleRegister = async() => {
+    try {
+      const user = await axios.get("https://morning-headland-70594.herokuapp.com/auth/google")
+      console.log(user)
+    } catch(e) {
+      console.log(e)
+    }
+  }
+
   return (
     <div className="flex justify-center fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-20 bg-[white] max-h-[90%] rounded-xl">
       <div className="w-[80%] m-[40px]">
@@ -168,6 +178,7 @@ const User = ({ showLogin }) => {
           </p>
         </div>
         <AuthButton
+          onClick={googleRegister}
           clas="text-slate-900 h-[40px]"
           icon="fa-brands fa-google mr-2"
           value="Sign up with Google"
@@ -209,6 +220,7 @@ const User = ({ showLogin }) => {
                 clas={`w-[60%] h-[40px] bg-[#4f7f19] ${
                   signingIn && "bg-[#9fcf68] cursor-not-allowed"
                 } `}
+
                 type="submit"
                 value="Submit"
                 disable={signingIn}

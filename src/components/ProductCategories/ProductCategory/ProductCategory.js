@@ -3,11 +3,12 @@ import {ProductsContext} from "../../../Helper/Context"
 import axios from 'axios'
 
 export default function ProductCategory({productName, productImg}) {
-    const {setProducts} = useContext(ProductsContext);
+    const {setProducts, setLoading} = useContext(ProductsContext);
     const filterProducts = async () => {
+        setLoading(true)
         const filteredProducts = await axios.get(`https://morning-headland-70594.herokuapp.com/products?category=${productName}`);
+        setLoading(false)
         setProducts(filteredProducts.data);
-
         console.log(filteredProducts)
     }
     return(

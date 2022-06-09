@@ -41,7 +41,7 @@ const LandingPage = () => {
   }
 
   return (
-    <div className="w-screen">
+    <div className="overflow-x-hidden">
       <Header showInfo={openSignUpModal}/>
       {showSignUp && (
         <Modal closeModal={closeModal} >

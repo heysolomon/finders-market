@@ -1,8 +1,8 @@
-import { legacy_createStore as createStore } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
-import rootReducer from './rootReducer'
+import { configureStore } from '@reduxjs/toolkit'
+// import { composeWithDevTools } from 'redux-devtools-extension'
+import reducer from './reducer'
 
 
-const store = createStore(rootReducer, composeWithDevTools())
+const store = configureStore({reducer})
 
 export default store;

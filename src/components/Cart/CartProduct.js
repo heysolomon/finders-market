@@ -20,7 +20,7 @@ const CartProduct = ({ products, removeItem, isEmpty, updateItemQuantity }) => {
               <div className="product-item-img flex items-center">
                 <img
                   className="h-[50px] w-[50px] mr-[10px]"
-                  src={product.img}
+                  src={product.productImg}
                   alt=""
                 />
                 <p>{product.name}</p>

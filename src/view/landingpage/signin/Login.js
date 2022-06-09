@@ -34,7 +34,7 @@ const Login = ({ showInfo }) => {
         "https://morning-headland-70594.herokuapp.com/auth/login",
         { ...values }
       );
-      // console.log(user);
+      console.log(user);
       if (user.status === 200) {
         setError(false);
         setErrorMessage(null);
