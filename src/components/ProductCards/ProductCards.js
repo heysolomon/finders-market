@@ -23,7 +23,7 @@ const ProductCards = ({ showInfo }) => {
 
   useEffect(() => {
     fetchProducts();
-  });
+  }, []);
 
   return (
     <div className={!loading && "grid grid-cols-4 w-full p-4 gap-2"}>
