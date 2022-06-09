@@ -23,7 +23,7 @@ const CartProduct = ({ products, removeItem, isEmpty, updateItemQuantity }) => {
                   src={product.productImg}
                   alt=""
                 />
-                <p>{product.name}</p>
+                <p>{product.productName}</p>
               </div>
               <div className="flex justify-center">
                 <p>&#8358;{product.price}.00</p>

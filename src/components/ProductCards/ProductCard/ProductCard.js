@@ -35,7 +35,7 @@ const ProductCard = ({
       </div>
       <h4 className="font-semibold text-xl m-2 ">{productName}</h4>
       <p className="m-2">
-        {productPrice} per {productSize}
+      &#8358;{productPrice} per {productSize}
       </p>
       <div className="pl-2 flex items-center">
         <Button
