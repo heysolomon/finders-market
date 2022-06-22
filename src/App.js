@@ -1,8 +1,8 @@
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import { ProductsContext, LoginContext } from "./Helper/Context";
 import Cart from "./Pages/Cart/Cart";
-import FormExample from "./Pages/Examples/users";
+// import FormExample from "./Pages/Examples/users";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import Congrate from "./view/Congrate";
 import Personalinfo from "./view/landingpage/logisticreg/Personalinfo";
@@ -35,19 +35,21 @@ import SettingsPage from "./Pages/dashboard/dashboardroutes/SettingsPage";
 import Storagepage from "./Pages/dashboard/dashboardroutes/StoragePage";
 import { Home } from "./Pages/dashboard/Home";
 import Transaction from "./Pages/dashboard/dashboardroutes/Transaction";
-import Users from "./Pages/Examples/users";
+import { ProtectedRoute } from "./Private/ProtectedRoute";
+// import Users from "./Pages/Examples/users";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [loggedIn, setLoggedIn] = useState(null);
   const [loggingIn, setLoggingIn] = useState(false);
   const [signingIn, setSigningIn] = useState(false);
-  const [loading, setLoading] = useState(true)
-
+  const [loading, setLoading] = useState(true);
 
   return (
     <BrowserRouter>
-      <ProductsContext.Provider value={{ products, setProducts, loading, setLoading }}>
+      <ProductsContext.Provider
+        value={{ products, setProducts, loading, setLoading }}
+      >
         <LoginContext.Provider
           value={{
             loggedIn,
@@ -59,12 +61,12 @@ function App() {
           }}
         >
           <div className="App">
-            <Routes >
-            <Route path="/users" element={<Users />} />
+            <Routes>
+              {/* <Route path="/users" element={<Users />} /> */}
 
               <Route path="/" element={<LandingPage />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/form" element={<FormExample />} />
+              {/* <Route path="/form" element={<FormExample />} /> */}
               <Route path="/signin" element={<Signin />} />
               <Route path="/business" element={<Business />} />
               <Route path="/emailvari" element={<EmailVari />} />
@@ -75,7 +77,22 @@ function App() {
               <Route path="/storageSignin" element={<StorageSignin />} />
               <Route path="/space" element={<Space />} />
               <Route path="/work" element={<Work />} />
-              {loggedIn && (
+              
+
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/checkout/success" element={<CheckoutSuccess />} />
+              <Route path="/storage-page" element={<Facilities />} />
+              <Route
+                path="/storage-page/booking"
+                element={<StorageBooking />}
+              />
+              <Route
+                path="/storage-page/booking/success"
+                element={<BookingSuccess />}
+              />
+              <Route path="/logistics-page" element={<LogisticsPage />} />
+            </Routes>
+            <ProtectedRoute>
                 <Route path="/dashboard" element={<Dashboard />}>
                   <Route path="" element={<Home />} />
 
@@ -100,21 +117,7 @@ function App() {
 
                   <Route path="notifications" element={<NotificationPage />} />
                 </Route>
-              )}
-
-              <Route path="/checkout" element={<Checkout />} />
-              <Route path="/checkout/success" element={<CheckoutSuccess />} />
-              <Route path="/storage-page" element={<Facilities />} />
-              <Route
-                path="/storage-page/booking"
-                element={<StorageBooking />}
-              />
-              <Route
-                path="/storage-page/booking/success"
-                element={<BookingSuccess />}
-              />
-              <Route path="/logistics-page" element={<LogisticsPage />} />
-            </Routes>
+              </ProtectedRoute>
             {/* {state?.backgroundLocation &&
               <Routes>
               

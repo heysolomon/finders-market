@@ -3,9 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { useContext, useState } from "react";
 import AuthButton from "../../../components/UI/Button/AuthButton";
-import axios from "axios";
 import { TextField } from "../../../components/UI/FormInput/TextField";
 import { LoginContext } from "../../../Helper/Context";
+import { api } from "../../../redux/services/api";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../../redux/users-slice";
 
 const Login = ({ showInfo }) => {
   const validate = Yup.object({
@@ -26,14 +28,17 @@ const Login = ({ showInfo }) => {
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
 
+  const dispatch = useDispatch()
+
   // login
   const login = async (values) => {
     try {
       setLoggingIn(true);
-      const user = await axios.post(
-        "https://morning-headland-70594.herokuapp.com/auth/login",
+      const user = await api.post(
+        "/auth/login",
         { ...values }
       );
+      dispatch(loginUser(user.data))
       console.log(user);
       if (user.status === 200) {
         setError(false);

@@ -1,31 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { api } from "./services/api";
-
 
 const usersSlice = createSlice({
-    name: 'users',
+    name: 'user',
     initialState: {
-        users: []
+        loggedInUser: null
     },
     reducers: {
-        getUsers: (state, action) => {
-            state.users = action.payload;
+        loginUser: (state, action) => {
+            state.loggedInUser = action.payload;
         }
     }
 })
 
-const {getUsers} = usersSlice.actions
+export const {loginUser} = usersSlice.actions
 
 export default usersSlice.reducer;
-
-// Actions
-
-
-export const fetchUsers = () => async dispatch => {
-    try {
-        await api.get('/users')
-        .then((response) => dispatch(getUsers(response.data)))
-    } catch (e) {
-        return console.error(e)
-    }
-}

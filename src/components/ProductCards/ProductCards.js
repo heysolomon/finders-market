@@ -8,22 +8,24 @@ import { SpinnerCircular } from "spinners-react";
 const ProductCards = ({ showInfo }) => {
   const { products, setProducts, loading, setLoading } =
     useContext(ProductsContext);
-  const fetchProducts = () => {
-    axios
-      .get("https://morning-headland-70594.herokuapp.com/products")
-      .then((res) => {
-        setLoading(false);
-        setProducts(res.data);
-      })
-      .catch((err) => {
-        setLoading(false);
-        console.log(err);
-      });
-  };
+  
 
   useEffect(() => {
+    const fetchProducts = () => {
+      axios
+        .get("https://morning-headland-70594.herokuapp.com/products")
+        .then((res) => {
+          setLoading(false);
+          setProducts(res.data);
+        })
+        .catch((err) => {
+          setLoading(false);
+          console.log(err);
+        });
+    };
+
     fetchProducts();
-  }, []);
+  }, [setProducts, setLoading, products, loading]);
 
   return (
     <div className={!loading && "grid grid-cols-4 w-full p-4 gap-2"}>

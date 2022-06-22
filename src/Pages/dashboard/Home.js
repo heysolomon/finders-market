@@ -1,9 +1,12 @@
-import React from "react";
+import { useSelector } from "react-redux";
 
 export const Home = () => {
+
+  const user = useSelector((state) => state.user.loggedInUser)
+  
   return (
-    <div>
-      <h2 className="text-xl">Dayo,</h2>
+    <div className="mt-[80px]">
+      <h2 className="text-xl">Hello {user.fullname}</h2>
       <p className="w-[35%] mb-5">your dashboard...</p>
 
       <div className="grid grid-cols-6 gap-4 grid-rols-2">
