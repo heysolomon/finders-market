@@ -1,8 +1,7 @@
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { ProductsContext, LoginContext } from "./Helper/Context";
 import Cart from "./Pages/Cart/Cart";
-import FormExample from "./Pages/Examples/users";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import Congrate from "./view/Congrate";
 import Personalinfo from "./view/landingpage/logisticreg/Personalinfo";
@@ -20,6 +19,8 @@ import { Facilities } from "./Pages/Storage/StoragePage/Facilities";
 import { StorageBooking } from "./Pages/Storage/Bookings/BookingForm";
 import { BookingSuccess } from "./Pages/Storage/Bookings/Success/BookingSuccess";
 import { LogisticsPage } from "./Pages/Logistics/Logistics";
+import Login from "./view/landingpage/signin/Login";
+import User from "./view/landingpage/signin/User";
 
 // Dashboard
 import Dashboard from "./Pages/dashboard/Dashboard";
@@ -35,19 +36,21 @@ import SettingsPage from "./Pages/dashboard/dashboardroutes/SettingsPage";
 import Storagepage from "./Pages/dashboard/dashboardroutes/StoragePage";
 import { Home } from "./Pages/dashboard/Home";
 import Transaction from "./Pages/dashboard/dashboardroutes/Transaction";
-import Users from "./Pages/Examples/users";
+import { useSelector } from "react-redux";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [loggedIn, setLoggedIn] = useState(null);
   const [loggingIn, setLoggingIn] = useState(false);
   const [signingIn, setSigningIn] = useState(false);
-  const [loading, setLoading] = useState(true)
-
+  const [loading, setLoading] = useState(true);
+  const { userInfo } = useSelector((state) => state);
 
   return (
     <BrowserRouter>
-      <ProductsContext.Provider value={{ products, setProducts, loading, setLoading }}>
+      <ProductsContext.Provider
+        value={{ products, setProducts, loading, setLoading }}
+      >
         <LoginContext.Provider
           value={{
             loggedIn,
@@ -59,12 +62,11 @@ function App() {
           }}
         >
           <div className="App">
-            <Routes >
-            <Route path="/users" element={<Users />} />
-
+            <Routes>
               <Route path="/" element={<LandingPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<User />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/form" element={<FormExample />} />
               <Route path="/signin" element={<Signin />} />
               <Route path="/business" element={<Business />} />
               <Route path="/emailvari" element={<EmailVari />} />
@@ -75,32 +77,44 @@ function App() {
               <Route path="/storageSignin" element={<StorageSignin />} />
               <Route path="/space" element={<Space />} />
               <Route path="/work" element={<Work />} />
-              {loggedIn && (
-                <Route path="/dashboard" element={<Dashboard />}>
-                  <Route path="" element={<Home />} />
 
-                  {/* Farmer routes */}
-                  <Route path="farmer" element={<FarmerPage />}>
-                    <Route path="" element={<Transaction />} />
-                    <Route path="farmerproduct" element={<FarmerProduct />} />
-                    <Route
-                      path="farmernewproduct"
-                      element={<FarmernewProduct />}
+              <Route
+                path="/dashboard"
+                element={
+                  userInfo ? (
+                    <Dashboard />
+                  ) : (
+                    <Navigate
+                      to="/login"
+                      state={{ from: "/dashboard" }}
+                      replace
                     />
-                    <Route path="farmertrans" element={<FarmerTrans />} />
-                  </Route>
+                  )
+                }
+              >
+                <Route path="" element={<Home />} />
 
-                  {/* Logistics routes */}
-                  <Route path="logistic" element={<LogisticPage />}>
-                    <Route path="bookings" element={<Booking />} />
-                    <Route path="transaction" element={<LogisticTrans />} />
-                  </Route>
-                  <Route path="storage" element={<Storagepage />} />
-                  <Route path="settings" element={<SettingsPage />} />
-
-                  <Route path="notifications" element={<NotificationPage />} />
+                {/* Farmer routes */}
+                <Route path="farmer" element={<FarmerPage />}>
+                  <Route path="" element={<Transaction />} />
+                  <Route path="farmerproduct" element={<FarmerProduct />} />
+                  <Route
+                    path="farmernewproduct"
+                    element={<FarmernewProduct />}
+                  />
+                  <Route path="farmertrans" element={<FarmerTrans />} />
                 </Route>
-              )}
+
+                {/* Logistics routes */}
+                <Route path="logistic" element={<LogisticPage />}>
+                  <Route path="bookings" element={<Booking />} />
+                  <Route path="transaction" element={<LogisticTrans />} />
+                </Route>
+                <Route path="storage" element={<Storagepage />} />
+                <Route path="settings" element={<SettingsPage />} />
+
+                <Route path="notifications" element={<NotificationPage />} />
+              </Route>
 
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/checkout/success" element={<CheckoutSuccess />} />

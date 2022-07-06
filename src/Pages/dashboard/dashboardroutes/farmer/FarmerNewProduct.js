@@ -1,25 +1,20 @@
 import { Form, Formik } from "formik";
-import DashboardInput from "../../dashboardConponents/DashboardInput";
-import SelectMenu from "../../dashboardConponents/SelectMenu";
-import TextArea from "../../dashboardConponents/TextArea";
-import Upload from "../../dashboardConponents/Upload";
+// import DashboardInput from "../../dashboardConponents/DashboardInput";
+// import SelectMenu from "../../dashboardConponents/SelectMenu";
+// import TextArea from "../../dashboardConponents/TextArea";
+// import Upload from "../../dashboardConponents/Upload";
 
 const FarmernewProduct = () => {
   return (
-    <Formik 
-    initialValues={{
-      productCategory: "",
-      productName: "",
-      productDesc: "",
-      productImg: null,
-      
-    }}
+    <Formik
+      initialValues={{
+        productCategory: "",
+        productName: "",
+        productDesc: "",
+        productImg: null,
+      }}
     >
-      {(formik) => (
-        <Form>
-
-        </Form>
-      )}
+      {(formik) => <Form></Form>}
     </Formik>
     // <div>
     //   <form className="grid grid-cols-2 gap-5 w-[80%] ml-[10%]">
