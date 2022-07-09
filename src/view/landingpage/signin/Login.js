@@ -3,9 +3,9 @@ import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import * as Yup from "yup";
 import AuthButton from "../../../components/UI/Button/AuthButton";
-import axios from "axios";
 import { TextField } from "../../../components/UI/FormInput/TextField";
 import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
 import {
   loginStart,
   loginSuccess,

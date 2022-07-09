@@ -43,13 +43,21 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(null);
   const [loggingIn, setLoggingIn] = useState(false);
   const [signingIn, setSigningIn] = useState(false);
+  const [productFailed, setProductFailed] = useState(false);
   const [loading, setLoading] = useState(true);
   const { userInfo } = useSelector((state) => state);
 
   return (
     <BrowserRouter>
       <ProductsContext.Provider
-        value={{ products, setProducts, loading, setLoading }}
+        value={{
+          products,
+          setProducts,
+          loading,
+          setLoading,
+          productFailed,
+          setProductFailed,
+        }}
       >
         <LoginContext.Provider
           value={{
