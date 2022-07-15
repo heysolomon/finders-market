@@ -6,7 +6,6 @@ import { SpinnerCircular } from "spinners-react";
 import Modal from "../UI/Modal/Modal";
 
 const ProductCards = ({ showInfo }) => {
-<<<<<<< HEAD
   const [error, setError] = useState(null);
   const [modal, setModal] = useState(false);
   const {
@@ -17,11 +16,6 @@ const ProductCards = ({ showInfo }) => {
     productFailed,
     setProductFailed,
   } = useContext(ProductsContext);
-=======
-  const { products, setProducts, loading, setLoading } =
-    useContext(ProductsContext);
-  
->>>>>>> master
 
   useEffect(() => {
     const fetchProducts = () => {
@@ -29,15 +23,11 @@ const ProductCards = ({ showInfo }) => {
         .get("https://morning-headland-70594.herokuapp.com/products")
         .then((res) => {
           setLoading(false);
-<<<<<<< HEAD
           setProductFailed(false);
-=======
->>>>>>> master
           setProducts(res.data);
         })
         .catch((err) => {
           setLoading(false);
-<<<<<<< HEAD
           setProductFailed(true);
           setError(err.message);
           setModal(true);
@@ -45,14 +35,6 @@ const ProductCards = ({ showInfo }) => {
     };
     fetchProducts();
   }, [setLoading, setProducts, setProductFailed]);
-=======
-          console.log(err);
-        });
-    };
-
-    fetchProducts();
-  }, [setProducts, setLoading, products, loading]);
->>>>>>> master
 
   return (
     <div className={!loading ? "grid grid-cols-4 w-full p-4 gap-2" : undefined}>

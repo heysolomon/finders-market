@@ -12,11 +12,6 @@
 //   return (
 //     <div>
 
-<<<<<<< HEAD
-//     </div>
-//   )
-// }
-=======
 // const Users = () => {
 //   const dispatch = useDispatch();
 //   const {users} = useSelector(state => state.user)
@@ -32,6 +27,5 @@
 // }
 
 // export default Users
->>>>>>> master
 
 // export default Users

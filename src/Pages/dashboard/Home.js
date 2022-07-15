@@ -1,20 +1,11 @@
 import { useSelector } from "react-redux";
 
 export const Home = () => {
-<<<<<<< HEAD
-  const { userInfo } = useSelector((state) => state);
+  const user = useSelector((state) => state.user.loggedInUser);
 
-  return (
-    <div className="mt-[80px]">
-      <h2 className="text-xl">Hello {userInfo.fullname}</h2>
-=======
-
-  const user = useSelector((state) => state.user.loggedInUser)
-  
   return (
     <div className="mt-[80px]">
       <h2 className="text-xl">Hello {user.fullname}</h2>
->>>>>>> master
       <p className="w-[35%] mb-5">your dashboard...</p>
 
       <div className="grid grid-cols-6 gap-4 grid-rols-2">

@@ -1,15 +1,15 @@
 import { SpinnerCircular } from "spinners-react";
 import { FcGoogle } from "react-icons/fc";
-import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { loginSuccess } from "../../../redux/userSlice";
+// import { useSelector, useDispatch } from "react-redux";
+// import { useNavigate } from "react-router-dom";
+// import { loginSuccess } from "../../../redux/userSlice";
 import jwt_decode from "jwt-decode";
 import { useEffect, useState } from "react";
 
 const AuthButton = (props) => {
   // const { userInfo } = useSelector((state) => state);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const navigate = useNavigate();
   const client_id = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 
   const [googleError, setGoogleError] = useState(false);
@@ -32,7 +32,7 @@ const AuthButton = (props) => {
       }
     };
     loadGoogleScript();
-  }, []);
+  }, [client_id]);
 
   const onSuccess = (res) => {
     // const {

@@ -10,11 +10,7 @@ function Upload() {
   return (
     <div className="grid grid-cols-2 w-full">
       <div className="rounded-lg shadow-xl bg-gray-50">
-<<<<<<< HEAD
-        <img className="w-full" src={file} alt="" />
-=======
         <img className="w-full" src={file} alt="this is a description" />
->>>>>>> master
       </div>
 
       <div className="flex justify-center mb-8 ">
