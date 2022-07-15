@@ -1,15 +1,26 @@
 import { Formik, Form } from "formik";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import * as Yup from "yup";
-import { useContext, useState } from "react";
 import AuthButton from "../../../components/UI/Button/AuthButton";
 import { TextField } from "../../../components/UI/FormInput/TextField";
+<<<<<<< HEAD
+import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
+import {
+  loginStart,
+  loginSuccess,
+  loginFailure,
+} from "../../../redux/userSlice";
+=======
 import { LoginContext } from "../../../Helper/Context";
 import { api } from "../../../redux/services/api";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../../redux/users-slice";
+>>>>>>> master
 
-const Login = ({ showInfo }) => {
+const Login = ({ showInfo, modal }) => {
+  const [message, setMessage] = useState("");
   const validate = Yup.object({
     email: Yup.string().email("Email is invalid").required("Email is required"),
     password: Yup.string()
@@ -17,22 +28,31 @@ const Login = ({ showInfo }) => {
       .required("Password is required"),
   });
 
+  const dispatch = useDispatch();
+  const { userInfo, loggingIn, error } = useSelector((state) => state);
   // redirecting
   const navigate = useNavigate();
-
-  // login success
-  const { loggedIn, setLoggedIn, loggingIn, setLoggingIn } =
-    useContext(LoginContext);
-
-  // Login error Message
-  const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(null);
+  const location = useLocation();
+  let from = location.state?.from;
 
   const dispatch = useDispatch()
 
   // login
   const login = async (values) => {
+    dispatch(loginStart());
     try {
+<<<<<<< HEAD
+      const user = await axios.post(
+        "https://morning-headland-70594.herokuapp.com/auth/login",
+        { ...values }
+      );
+      dispatch(loginSuccess(user.data));
+      setMessage("Login success!");
+      setTimeout(() => {
+        navigate("/dashboard");
+        if (from) navigate(from);
+      }, 1000);
+=======
       setLoggingIn(true);
       const user = await api.post(
         "/auth/login",
@@ -49,28 +69,30 @@ const Login = ({ showInfo }) => {
           navigate("/dashboard");
         }, 1000);
       }
+>>>>>>> master
     } catch (err) {
-      setLoggingIn(false);
-      setLoggedIn(false);
-      setErrorMessage(err.response.data.message);
-      setError(true);
+      if (err) {
+        dispatch(loginFailure());
+        console.log(err);
+        setMessage(err.response.data.message);
+      }
     }
   };
 
-  console.log(loggedIn);
   return (
     <div className="flex flex-col justify-center  items-center fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-20 bg-[white] max-h-[90%] rounded-xl p-10">
       {/* error block */}
-      {error && !loggedIn && (
+      {error && !loggingIn ? (
         <div className="w-full h-[50px] flex justify-center items-center ">
-          <p className="text-red-700 text-xs">{errorMessage}</p>
+          <p className="text-red-700 text-xs">{message}</p>
         </div>
-      )}
-
-      {loggedIn && !error && (
-        <div className="w-full h-[50px] flex justify-center items-center ">
-          <p className="text-[#81d324] text-xs">Login Success!</p>
-        </div>
+      ) : (
+        !error &&
+        userInfo && (
+          <div className="w-full h-[50px] flex justify-center items-center ">
+            <p className="text-[#81d324] text-xs">{message}</p>
+          </div>
+        )
       )}
       <div className="flex justify-between w-full items-center mt-5">
         <h2 className="text-[#4f7f19] text-md ">Login</h2>
@@ -135,9 +157,9 @@ const Login = ({ showInfo }) => {
         <p className="text-xs mt-3">
           Dont have an account?
           <Link
-            onClick={showInfo}
+            onClick={modal ? showInfo : undefined}
             className="text-[#4f7f19] text-xs hover:text-gray-800 "
-            to=""
+            to={!modal ? "/register" : ""}
           >
             {" "}
             Sign up

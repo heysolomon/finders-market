@@ -4,8 +4,7 @@ import truck from "../../../Assets/Images/truck.png";
 import farmer from "../../../Assets/Images/seedling.png";
 import storage from "../../../Assets/Images/warehouse.png";
 import settings from "../../../Assets/Images/settings.png";
-import logo from '../../../Assets/Images/finderslogo.png'
-
+import logo from "../../../Assets/Images/finderslogo.png";
 
 const Sidebar = (props) => {
   const navLinkStyles = ({ isActive }) => {
@@ -42,20 +41,25 @@ const Sidebar = (props) => {
   return (
     <div className=" h-full bg-[#4f7f19] fixed z-40 w-[17%]">
       <Link to="/">
+<<<<<<< HEAD
+        <img src={logo} alt="" />
+=======
       <img src={logo} alt="" />
+>>>>>>> master
       </Link>
 
       <nav className="mt-0">
         <div className=" ml-5 mt-0">
-          {links.map((links) => (
+          {links.map((link) => (
             <NavLink
+              key={link.id}
               style={navLinkStyles}
               className="w-full hover:opacity-50 font-thin  uppercase text-white flex items-center p-4 my-2 transition-colors duration-200 justify-start bg-gradient-to-r "
-              to={links.to}
+              to={link.to}
             >
-              <img src={links.icon} alt="" width="40" />
+              <img src={link.icon} alt="" width="40" />
 
-              <div className="mx-4 text-sm font-normal">{links.name}</div>
+              <div className="mx-4 text-sm font-normal">{link.name}</div>
             </NavLink>
           ))}
         </div>

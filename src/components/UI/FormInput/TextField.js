@@ -1,7 +1,15 @@
 import { useState } from "react";
 import { ErrorMessage, useField } from "formik";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
-export const TextField = ({ width, type, newClass, labelClass, label, ...props }) => {
+export const TextField = ({
+  width,
+  type,
+  newClass,
+  labelClass,
+  label,
+  ...props
+}) => {
   const [field, meta] = useField(props);
 
   const [passwordType, setPasswordType] = useState(type);
@@ -22,8 +30,8 @@ export const TextField = ({ width, type, newClass, labelClass, label, ...props }
         className={`mt-1 mr-2 mb-0 flex justify-between items-center text-md  px-3 py-4 rounded-lg w-[full] 
                 bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md
                 focus:placeholder-gray-500 h-[40px] ${newClass} ${
-                  meta.touched && meta.error && "border-red-600"
-                }`}
+          meta.touched && meta.error && "border-red-600"
+        }`}
       >
         <input
           {...field}
@@ -35,9 +43,9 @@ export const TextField = ({ width, type, newClass, labelClass, label, ...props }
         {type === "password" && props.name !== "cvv" && (
           <span onClick={togglePassword}>
             {passwordType === "password" ? (
-              <i class="fa-regular fa-eye-slash fa-sm w-[15px]"></i>
+              <AiOutlineEyeInvisible className="mr-1 cursor-pointer" />
             ) : (
-              <i class="fa-regular fa-eye fa-sm w-[15px]"></i>
+              <AiOutlineEye className="mr-1 cursor-pointer" />
             )}
           </span>
         )}
