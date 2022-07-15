@@ -12,8 +12,26 @@
 //   return (
 //     <div>
 
+<<<<<<< HEAD
 //     </div>
 //   )
 // }
+=======
+// const Users = () => {
+//   const dispatch = useDispatch();
+//   const {users} = useSelector(state => state.user)
+//   console.log(users)
+//   useEffect(() => {
+//          dispatch(fetchUsers([]))
+//   },[dispatch]);
+//   return (
+//     <div>
+
+//     </div>
+//   )
+// }
+
+// export default Users
+>>>>>>> master
 
 // export default Users

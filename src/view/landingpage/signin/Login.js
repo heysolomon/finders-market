@@ -4,6 +4,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import * as Yup from "yup";
 import AuthButton from "../../../components/UI/Button/AuthButton";
 import { TextField } from "../../../components/UI/FormInput/TextField";
+<<<<<<< HEAD
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import {
@@ -11,6 +12,12 @@ import {
   loginSuccess,
   loginFailure,
 } from "../../../redux/userSlice";
+=======
+import { LoginContext } from "../../../Helper/Context";
+import { api } from "../../../redux/services/api";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../../redux/users-slice";
+>>>>>>> master
 
 const Login = ({ showInfo, modal }) => {
   const [message, setMessage] = useState("");
@@ -28,10 +35,13 @@ const Login = ({ showInfo, modal }) => {
   const location = useLocation();
   let from = location.state?.from;
 
+  const dispatch = useDispatch()
+
   // login
   const login = async (values) => {
     dispatch(loginStart());
     try {
+<<<<<<< HEAD
       const user = await axios.post(
         "https://morning-headland-70594.herokuapp.com/auth/login",
         { ...values }
@@ -42,6 +52,24 @@ const Login = ({ showInfo, modal }) => {
         navigate("/dashboard");
         if (from) navigate(from);
       }, 1000);
+=======
+      setLoggingIn(true);
+      const user = await api.post(
+        "/auth/login",
+        { ...values }
+      );
+      dispatch(loginUser(user.data))
+      console.log(user);
+      if (user.status === 200) {
+        setError(false);
+        setErrorMessage(null);
+        setLoggedIn(true);
+        setTimeout(() => {
+          setLoggingIn(false);
+          navigate("/dashboard");
+        }, 1000);
+      }
+>>>>>>> master
     } catch (err) {
       if (err) {
         dispatch(loginFailure());

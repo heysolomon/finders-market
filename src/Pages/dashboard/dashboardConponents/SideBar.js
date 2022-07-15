@@ -41,7 +41,11 @@ const Sidebar = (props) => {
   return (
     <div className=" h-full bg-[#4f7f19] fixed z-40 w-[17%]">
       <Link to="/">
+<<<<<<< HEAD
         <img src={logo} alt="" />
+=======
+      <img src={logo} alt="" />
+>>>>>>> master
       </Link>
 
       <nav className="mt-0">
