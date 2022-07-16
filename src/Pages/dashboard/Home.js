@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 export const Home = () => {
-  const user = useSelector((state) => state.user.loggedInUser);
+  const user = useSelector((state) => state.userInfo);
 
   return (
     <div className="mt-[80px]">
