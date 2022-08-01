@@ -3,8 +3,8 @@ import { Button } from "../UI/Button/Button";
 
 const PaymentSummary = ({ items, cartTotal}) => {
     return(
-        <div className="pl-[10px] w-full">
-            <h3>Payment Summary</h3>
+        <div className="sm:pl-[10px] w-full">
+            <h3 className=" my-3 sm;my-0">Payment Summary</h3>
             <div className="border-[1px] border-[#C4C4C4] w-full h-[350px] p-[10px] rounded-[10px] shadow-md flex flex-col justify-between">
                 <div className="w-full h-[70px] rounded-[10px] bg-[#C4C4C4]">
                     

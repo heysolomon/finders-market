@@ -50,7 +50,7 @@ export const Facilities = () => {
           <StorageBooking />
         </Modal>
       )}
-      <div className="max-w-[1040px] mx-auto mt-[80px]">
+      <div className="max-w-[1040px] m-auto w-full mt-[80px]">
         <h2 className="text-2xl mb-5">Explore your choices</h2>
         <Facility openBookings={openBookings} />
       </div>

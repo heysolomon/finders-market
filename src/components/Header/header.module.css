@@ -109,3 +109,13 @@
     width: 65%;
 }
 
+
+
+@media screen and (max-width: 640px) {
+    .hero {
+
+        display: none;
+    }
+
+
+}

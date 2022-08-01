@@ -21,11 +21,11 @@ const ProductCard = ({
     productId: productId,
   };
 
-  const {_id:id, productQuantity:quantity, productPrice:price, ...others} = product;
-  const newProduct = {id, quantity, price, ...others};
+  const { _id: id, productQuantity: quantity, productPrice: price, ...others } = product;
+  const newProduct = { id, quantity, price, ...others };
 
   return (
-    <div className="w-[85%] h-[300px] rounded-lg my-2 bg-[white] shadow-[#ccc] shadow-md cursor-pointer hover:scale-105 transition ease-in-out duration-150">
+    <div className="sm:w-[85%] max-w-[200px]  h-[300px] rounded-lg my-2 bg-[white] shadow-[#ccc] shadow-md cursor-pointer hover:scale-105 active:scale-105 transition ease-in-out duration-150">
       <div className="w-full h-[50%] mb-2">
         <img
           className="w-full h-full object-cover rounded-t-lg"
@@ -35,11 +35,11 @@ const ProductCard = ({
       </div>
       <h4 className="font-semibold text-xl m-2 ">{productName}</h4>
       <p className="m-2">
-      &#8358;{productPrice} per {productSize}
+        &#8358;{productPrice} per {productSize}
       </p>
-      <div className="pl-2 flex items-center">
+      <div className="pl-2 flex sm:items-center flex-col sm:flex-row items-end">
         <Button
-          className="disabled:bg-[#c4c4c4] text-xs"
+          className="disabled:bg-[#c4c4c4] text-[12px] sm:text-xs"
           color="white"
           width="50%"
           background="#4F7F19"
@@ -54,7 +54,7 @@ const ProductCard = ({
         </Button>
 
         <Link
-          className="ml-2 text-xs text-slate-900"
+          className="ml-2 text-xs text-slate-900 my-2 sm:my-0"
           to=""
           onClick={() => showInfo(props)}
         >

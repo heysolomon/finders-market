@@ -21,7 +21,7 @@ const FarmerProduct = () => {
       active: "In Market",
     },
     {
-      id: 2,
+      id: 3,
       date: "2/4/22",
       productimg: "",
       productName: "Ginger",
@@ -66,7 +66,7 @@ const FarmerProduct = () => {
           </thead>
           <tbody>
             {productinfo.map((info) => (
-              <tr className="bg-white shadow-2xl border-b-8 border-gray-100  ">
+              <tr key={info.id} className="bg-white shadow-2xl border-b-8 border-gray-100  ">
                 <td className="text-sm  font-light px-6 py-4 whitespace-nowrap">
                   <div className="flex items-center">
                     <img alt="" src={img} width="50" />

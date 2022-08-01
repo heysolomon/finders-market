@@ -12,15 +12,15 @@ export default function ProductInfo({ productDetails }) {
   return (
     // <div className="z-10 px-10 py-8 bg-[white] fixed max-w-[1000px] w-[1000px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-sm transition-all ease-in-out duration-300">
     <div className="bg-[white] w-full h-full">
-      <div className="flex justify-around items-center">
-        <div className="h-[270px] w-[250px]">
+      <div className="flex flex-col sm:flex-row sm:justify-around items-center">
+        <div className="h-[270px] w-full max-w-[250px]">
           <img
             className="w-full h-full object-cover"
             src={productDetails.productImg}
             alt="product-img"
           />
         </div>
-        <div className="w-[40%]">
+        <div className=" w-[60%] sm:w-[40%]">
           <h2 className="font-semibold text-2xl my-3">Description</h2>
           <p className="leading-8 text-sm">{productDetails?.description}</p>
           <div>

@@ -4,17 +4,17 @@ import CartButton from "../UI/Button/CartButton";
 
 const CartProduct = ({ products, removeItem, isEmpty, updateItemQuantity }) => {
   return (
-    <div>
+    <div >
       {isEmpty ? (
-        <div className="w-full h-full flex justify-center items-center">
-          You currently have nothing in your cart
+        <div className="w-full h-full   sm:flex justify-center items-center">
+          <p className=" shadow-xl p-5"> You currently have nothing in your cart</p>
         </div>
       ) : (
         <div className="pr-[10px]">
           <h3 className="text-[#4F7F19] ">Cart</h3>
           {products.map((product) => (
             <div
-              className="grid grid-cols-4 items-center p-[10px] w-full shadow-lg rounded-[10px] mb-[15px]"
+              className="grid grid-cols-2 gap-2 sm:gap-0 sm:grid-cols-4 items-center p-[10px] w-full shadow-lg rounded-[10px] mb-[15px]"
               key={product.id}
             >
               <div className="product-item-img flex items-center">

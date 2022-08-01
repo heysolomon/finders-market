@@ -34,9 +34,11 @@ import LogisticPage from "./Pages/dashboard/dashboardroutes/LogisticPage";
 import NotificationPage from "./Pages/dashboard/dashboardroutes/NotificationPage";
 import SettingsPage from "./Pages/dashboard/dashboardroutes/SettingsPage";
 import Storagepage from "./Pages/dashboard/dashboardroutes/StoragePage";
+import ServiceSetUp from './Pages/dashboard/dashboardroutes/ServiceSetUp';
 import { Home } from "./Pages/dashboard/Home";
 import Transaction from "./Pages/dashboard/dashboardroutes/Transaction";
 import { useSelector } from "react-redux";
+import Settings from "./Pages/dashboard/dashboardroutes/Settings";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -79,7 +81,7 @@ function App() {
               <Route path="/business" element={<Business />} />
               <Route path="/emailvari" element={<EmailVari />} />
               <Route path="/congratulation" element={<Congrate />} />
-              <Route path="/service" element={<Service />} />
+              {/* <Route path="/service" element={<Service />} /> */}
               <Route path="/Vehiclereg" element={<VehicleReg />} />
               <Route path="/Personalinfo" element={<Personalinfo />} />
               <Route path="/storageSignin" element={<StorageSignin />} />
@@ -119,10 +121,11 @@ function App() {
                   <Route path="transaction" element={<LogisticTrans />} />
                 </Route>
                 <Route path="storage" element={<Storagepage />} />
-                <Route path="settings" element={<SettingsPage />} />
+                <Route path="settings" element={<Settings />} />
 
                 <Route path="notifications" element={<NotificationPage />} />
               </Route>
+              <Route path="/service" element={<ServiceSetUp />} />
 
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/checkout/success" element={<CheckoutSuccess />} />

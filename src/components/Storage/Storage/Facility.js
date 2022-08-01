@@ -14,9 +14,9 @@ export const Facility = ({openBookings}) => {
 // let navigate = useNavigate()
 
   return (
-    <div className="w-full grid grid-cols-4">
+    <div className="w-[95%] grid grid-cols-2 m-auto sm:grid-cols-4 gap-4">
       {facilities.map((item) => (
-        <div key={item.id} className="mb-10 mr-5 shadow-xl rounded-md">
+        <div key={item.id} className="  sm:mb-10 sm:mr-5 shadow-xl rounded-md">
           <div className="w-full">
             <img
               className="w-full rounded-t-md"
@@ -47,14 +47,14 @@ export const Facility = ({openBookings}) => {
 
           <div className="flex justify-between w-full px-[10px] mb-[20px]">
             <Button
-              className="text-[white] text-xs w-[100px]"
+              className="text-[white] text-xs sm:w-[100px] w-[70px] mx-2"
               background="#4F7F19"
               onClick={openBookings}
             >
               Book
             </Button>
             <BorderButton
-              className="border-[#4F7F19] border-[2px] text-xs w-[100px]"
+              className="border-[#4F7F19] border-[2px] text-xs w-[70px] sm:w-[100px] mx-2"
               background="#ffff"
               color="#4F7F19"
               border="1px solid #4F7F19"

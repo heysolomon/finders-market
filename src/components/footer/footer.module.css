@@ -24,12 +24,6 @@ img.foot{
     justify-content: center;
     position: relative;
     top: -70px;
-    /* position: relative;
-    left: 25%;
-   
-    transition: .4s;
-
-    margin: 0 auto; */
 
 }
 
@@ -176,3 +170,9 @@ img .back_up{
     border-radius: 8px 8px 0px  0px;
 
 }
+
+
+/* @media screen (max-width=374px) {
+
+    
+} */

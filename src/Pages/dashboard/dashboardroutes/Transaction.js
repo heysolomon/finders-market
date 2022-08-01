@@ -31,7 +31,7 @@ const Transaction = () => {
     },
 
     {
-      id: 4,
+      id: 5,
       info: "You made a Withdrawal.",
       credit: "+22,00.00",
       date: "2/4/22",
@@ -55,7 +55,7 @@ const Transaction = () => {
           </thead>
           <tbody>
             {transactioninfo.map((info) => (
-              <tr className="bg-white shadow-2xl  ">
+              <tr key={info.id} className="bg-white shadow-2xl  ">
                 <td className="text-sm border-b-2  text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                   <p>{info.info}</p>
                   <p className="text-xs m-1">{info.date}</p>

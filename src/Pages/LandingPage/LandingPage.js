@@ -40,6 +40,7 @@ const LandingPage = () => {
 
   return (
     <div className="overflow-x-hidden">
+
       <Header showInfo={openSignUpModal} />
       <Modal closeModal={closeModal} show={showSignUp || showLogin}>
         {showSignUp ? (
@@ -49,10 +50,11 @@ const LandingPage = () => {
         )}
       </Modal>
 
-      <div className="max-w-[1040px] mx-auto w-screen">
+      <div className="max-w-[1040px] m-auto w-screen">
         <Modal closeModal={closeModal} show={showModal}>
           <div
-            className="z-10 px-10 py-8 bg-[white] fixed max-w-[900px] w-[900px] top-[50%] left-[50%] rounded-sm transition-all ease-in-out duration-150"
+            className="z-10 sm:px-10 py-8 bg-[white] fixed  max-w-[900px]
+            w-[90%] top-[50%] left-[50%] rounded-sm transition-all ease-in-out duration-150"
             style={{
               transform: showModal
                 ? "scale(1) translate(-50%, -50%)"

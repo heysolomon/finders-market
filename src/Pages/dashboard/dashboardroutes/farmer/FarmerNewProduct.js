@@ -7,9 +7,9 @@ import Upload from "../../dashboardConponents/Upload";
 
 const FarmernewProduct = () => {
 
-  // const formData = {
+  const formData = {
     
-  // }
+  }
   return (
     <>
       <Formik

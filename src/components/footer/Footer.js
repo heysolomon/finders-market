@@ -62,7 +62,7 @@ const Footer = () => {
       <div className={footer.container}>
         <div className="flex justify-center shadow-sm px-6 py-4 items-center bg-white absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-3 rounded w-[65%]">
           <h4 className="font-normal mr-2">Subscribe to our newsletter</h4>
-          <form className="border-2 rounded border-gray-300 bg-white p-1">
+          {/* <form className="border-2 rounded border-gray-300 bg-white p-1">
             <input
               className={footer.footersearch}
               type="email"
@@ -71,7 +71,7 @@ const Footer = () => {
             <button className="p-3  rounded bg-[#7DD145] text-white ">
               Subscribe Now
             </button>
-          </form>
+          </form> */}
         </div>
       </div>
       <div className={footer.sub_footer}>
@@ -112,19 +112,6 @@ const Footer = () => {
           </div>
         </div>
         <div className={footer.right}>
-          {/* <div className={footer.social}>
-            <div className={footer.sub_social}>
-              <img src={social} alt="" style={{ width: "20px" }} />
-
-              <img src={social2} alt="" style={{ width: "20px" }} />
-            </div>
-
-            <div className={footer.sub_social}>
-              <img src={social3} alt="" style={{ width: "20px" }} />
-
-              <img src={social} alt="" style={{ width: "20px" }} />
-            </div>
-          </div> */}
           <div className={footer.sub_right}>
             <img
               className={footer.back_up}

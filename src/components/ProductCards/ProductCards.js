@@ -37,7 +37,7 @@ const ProductCards = ({ showInfo }) => {
   }, [setLoading, setProducts, setProductFailed]);
 
   return (
-    <div className={!loading ? "grid grid-cols-4 w-full p-4 gap-2" : undefined}>
+    <div className={!loading ? "grid grid-cols-2  sm:grid-cols-4 w-[95%] m-auto sm:w-full sm:p-4 gap-4  sm:gap-2" : undefined}>
       {loading ? (
         <SpinnerCircular
           color="#4f7f19"
@@ -49,7 +49,7 @@ const ProductCards = ({ showInfo }) => {
         <>
           <Modal show={modal} closeModal={() => setModal(false)}>
             <div
-              className="bg-white flex justify-center align-center p-2 z-10 w-80 fixed left-[50%] translate-x-[-50%] translate-y-[-50%] transition-all ease-in-out duration-300 delay-100 top-[-100%]"
+              className="bg-white  flex justify-center align-center p-2 z-10 w-80 fixed left-[50%] translate-x-[-50%] translate-y-[-50%] transition-all ease-in-out duration-300 delay-100 top-[-100%]"
               style={{ top: modal && "50%" }}
             >
               {error}
