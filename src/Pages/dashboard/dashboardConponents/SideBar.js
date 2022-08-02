@@ -3,7 +3,7 @@ import dash from "../../../Assets/Images/dashlogo.png";
 import truck from "../../../Assets/Images/truck.png";
 import farmer from "../../../Assets/Images/seedling.png";
 import storage from "../../../Assets/Images/warehouse.png";
-import settings from "../../../Assets/Images/settings.png";
+// import settings from "../../../Assets/Images/settings.png";
 import logo from '../../../Assets/Images/finderslogo.png'
 
 
@@ -14,6 +14,7 @@ const Sidebar = (props) => {
   //   };
   // };
   const links = [
+
     {
       id: 1,
       to: "/dashboard",
@@ -39,31 +40,59 @@ const Sidebar = (props) => {
       name: "Storage",
     },
   ];
+
+  const defaultacc = [
+    {
+      id: 1,
+      to: "/dashboard/details",
+      name: "Details",
+    },
+    {
+      id: 2,
+      to: "/dashboard/address",
+      name: "Address Book",
+    },
+    {
+      id: 3,
+      to: "/dashboard/changepassword",
+      name: "Change Password",
+    },
+    {
+      id: 4,
+      to: "/dashboard/settings",
+      name: "Close Account",
+    },
+
+  ];
   return (
     <div className=" h-full bg-[#4f7f19] fixed z-10 w-[20%]">
-      <Link to="/"><img src={logo} alt="" /></Link>
+      <Link to="/"><img src={logo} alt="" width="200" /></Link>
       <nav className="mt-0">
-        <div className=" ml-5 mt-0">
-            {
+        <div className="">
+          {
             links.map((links) => (
-              <NavLink key={links.id} className="w-full hover:opacity-50 font-thin  uppercase text-white flex items-center p-4 my-2 transition-colors duration-200 justify-start bg-gradient-to-r " to={links.to}>
-                <img src={links.icon} alt="" width="40" />
-                <span className="mx-4 text-sm font-normal">{links.name}</span>
+              <NavLink key={links.id} className=" 
+              p-2 my-2 w-full hover:opacity-50 font-thin
+            text-white flex items-center transition-colorsjustify-start " to={links.to}>
+                <img src={links.icon} alt="" width="25" />
+                <span className="ml-4 text-[14px] font-normal">{links.name}</span>
               </NavLink>
             ))
-            
-            }
+          }
+
+        <div className=" border-t rounded-t-2xl ">
+        {
+            defaultacc.map((links) => (
+              <NavLink key={links.id} className=" 
+              p-2 my-2 w-full hover:opacity-50 font-thin
+            text-white flex items-center transition-colorsjustify-start " to={links.to}>
+                <span className="ml-4 text-[14px] font-normal">{links.name}</span>
+              </NavLink>
+            ))
+          }
+          <p className=" text-center w-full text-white mt-5 ">LOGOUT</p>
         </div>
-
-        <NavLink className="w-full  ml-5 mt-14  hover:opacity-50 font-thin  uppercase text-white flex items-center px-4  transition-colors duration-200 justify-start bg-gradient-to-r " to="/dashboard/settings" >
-          <img src={settings} alt="" width="40" />
-          <span className="mx-4 text-sm font-normal">Settings</span>
-        </NavLink>
-
-        <NavLink className="w-full  ml-16   hover:opacity-50 font-thin  uppercase text-white px-4 transition-colors duration-200 justify-start bg-gradient-to-r " to="/" >
-          <span className="mx-4 mt-10 text-xs ">Log Out</span>
-        </NavLink>
-
+        </div>
       </nav>
     </div>
   );

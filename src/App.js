@@ -6,7 +6,6 @@ import LandingPage from "./Pages/LandingPage/LandingPage";
 import Congrate from "./view/Congrate";
 import Personalinfo from "./view/landingpage/logisticreg/Personalinfo";
 import VehicleReg from "./view/landingpage/logisticreg/VehicleReg";
-import Service from "./view/landingpage/Service";
 import Business from "./view/landingpage/signin/Business";
 import EmailVari from "./view/landingpage/signin/EmaillVeri";
 import Signin from "./view/landingpage/signin/Signin";
@@ -32,13 +31,16 @@ import Booking from "./Pages/dashboard/dashboardroutes/logistic/Booking";
 import LogisticTrans from "./Pages/dashboard/dashboardroutes/logistic/LogisticTrans";
 import LogisticPage from "./Pages/dashboard/dashboardroutes/LogisticPage";
 import NotificationPage from "./Pages/dashboard/dashboardroutes/NotificationPage";
-import SettingsPage from "./Pages/dashboard/dashboardroutes/SettingsPage";
 import Storagepage from "./Pages/dashboard/dashboardroutes/StoragePage";
 import ServiceSetUp from './Pages/dashboard/dashboardroutes/ServiceSetUp';
 import { Home } from "./Pages/dashboard/Home";
 import Transaction from "./Pages/dashboard/dashboardroutes/Transaction";
 import { useSelector } from "react-redux";
 import Settings from "./Pages/dashboard/dashboardroutes/Settings";
+import Details from "./Pages/dashboard/Settings/Details";
+import ChangePassword from "./Pages/dashboard/Settings/ChangePassword";
+import AddressPage from "./Pages/dashboard/Settings/AddressPage";
+import AddAddress from "./Pages/dashboard/Settings/AddAddress";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -104,6 +106,7 @@ function App() {
               >
                 <Route path="" element={<Home />} />
 
+
                 {/* Farmer routes */}
                 <Route path="farmer" element={<FarmerPage />}>
                   <Route path="" element={<Transaction />} />
@@ -120,8 +123,15 @@ function App() {
                   <Route path="bookings" element={<Booking />} />
                   <Route path="transaction" element={<LogisticTrans />} />
                 </Route>
+
                 <Route path="storage" element={<Storagepage />} />
                 <Route path="settings" element={<Settings />} />
+
+                <Route path="Details" element={<Details />} />
+                <Route path="changepassword" element={<ChangePassword />} />
+                <Route path="address" element={<AddressPage />} />
+                <Route path="addaddress" element={<AddAddress />} />
+               
 
                 <Route path="notifications" element={<NotificationPage />} />
               </Route>
