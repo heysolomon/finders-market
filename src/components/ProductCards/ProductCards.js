@@ -37,7 +37,7 @@ const ProductCards = ({ showInfo }) => {
   }, [setLoading, setProducts, setProductFailed]);
 
   return (
-    <div className={!loading ? "grid grid-cols-2  sm:grid-cols-4 w-[95%] m-auto sm:w-full sm:p-4 gap-4  sm:gap-2" : undefined}>
+    <div className={!loading ? "grid grid-cols-2  sm:grid-cols-4 w-[100%] m-auto sm:w-full sm:p-4   sm:gap-2" : undefined}>
       {loading ? (
         <SpinnerCircular
           color="#4f7f19"

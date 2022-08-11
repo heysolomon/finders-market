@@ -25,7 +25,8 @@ const ProductCard = ({
   const newProduct = { id, quantity, price, ...others };
 
   return (
-    <div className="sm:w-[85%] max-w-[200px]  h-[300px] rounded-lg my-2 bg-[white] shadow-[#ccc] shadow-md cursor-pointer hover:scale-105 active:scale-105 transition ease-in-out duration-150">
+    <div className="sm:w-[85%] w-[95%] m-auto sm:max-w-[200px] my-2 h-[300px] rounded sm:rounded-lg sm:my-2 bg-[white] 
+    shadow-[#ccc] shadow-2xl sm:shadow-md cursor-pointer sm:hover:scale-105 active:scale-105 transition ease-in-out duration-150">
       <div className="w-full h-[50%] mb-2">
         <img
           className="w-full h-full object-cover rounded-t-lg"
@@ -33,13 +34,13 @@ const ProductCard = ({
           alt="product-img"
         />
       </div>
-      <h4 className="font-semibold text-xl m-2 ">{productName}</h4>
+      <h4 className="font-semibold sm:text-xl m-2 ">{productName}</h4>
       <p className="m-2">
         &#8358;{productPrice} per {productSize}
       </p>
       <div className="pl-2 flex sm:items-center flex-col sm:flex-row items-end">
         <Button
-          className="disabled:bg-[#c4c4c4] text-[12px] sm:text-xs"
+          className="disabled:bg-[#c4c4c4] text-[12px] sm:text-xs mr-5 sm:mr-0"
           color="white"
           width="50%"
           background="#4F7F19"
@@ -54,7 +55,7 @@ const ProductCard = ({
         </Button>
 
         <Link
-          className="ml-2 text-xs text-slate-900 my-2 sm:my-0"
+          className="sm:ml-2 mr-9 sm:mr-0 text-xs text-slate-900 my-2 sm:my-0"
           to=""
           onClick={() => showInfo(props)}
         >

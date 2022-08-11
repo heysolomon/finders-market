@@ -33,8 +33,11 @@ const FarmerProduct = () => {
 
   return (
     <div>
-      <div className="flex flex-col justify-center ">
-        <table className="w-[95%] ml-4">
+      {/* <div className=" absolute top-0  left-0 bg-black/50 w-full h-screen z-40">
+
+      </div> */}
+      <div className="flex flex-col justify-center">
+        <table className="w-[86%] ml-[7%] mt-5">
           <thead className="">
             <tr>
               <th

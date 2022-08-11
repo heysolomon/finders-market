@@ -27,7 +27,10 @@ export default function ProductCategories() {
 
     return (
       <>
-      <h2 className="font-bold text-xl ml-4 mt-10">Popular Categories</h2>
+      <div className="flex  justify-between items-center pt-10 mx-5">
+      <h2 className="sm:font-bold font-semibold sm:text-xl ">Categories</h2>
+      <p className="sm:font-bold font-semibold sm:hidden">See All</p>
+      </div>
         <div className=" overflow-scroll sm:overflow-hidden w-full flex justify-start sm:max-w-[1040px]">
           <div className="flex w-600px  sm:w-full justify-around">
             {productCategories.map(product => 

@@ -1,5 +1,6 @@
 import Button from "../../../components/Button";
 import {motion } from 'framer-motion'
+import { Link } from "react-router-dom";
 
 const Details = () => {
     const detail = [
@@ -26,7 +27,7 @@ const Details = () => {
         },
     ]
     return (
-        <div className=" h-screen pt-[100px] ml-10 bg-white " >
+        <div className=" sm:h-screen pt-[100px] sm:ml-10 bg-white " >
                  <motion.div 
             initial={{
                 y: -100,
@@ -36,20 +37,21 @@ const Details = () => {
             }}
             transition={{
                 duration: .5
-            }} className=" p-3 bg-white  border-b mb-5">
+            }} className=" p-3 bg-white  border-b mb-5 flex justify-between items-center">
+                <Link to="/dashboard"  >Back</Link>
                 <p>Details</p>
             </motion.div>
-            <form className=" grid grid-cols-2 gap-4 p-5">
+            <form className=" sm:grid sm:grid-cols-2  gap-4 p-5 w-[80%] m-auto">
                 {
                     detail.map((detail) => (
-                        <InPut {...detail} />
+                        <InPut key={detail.id} {...detail} />
                     ))
                 }
                 <div className=" flex flex-col">
                     <label>Phone Number (optional)</label>
                     <div className=" flex items-center w-full ">
-                        <p className=" border p-2 rounded-l mt-2 w-[10%] border-r-0 ">+234</p>
-                        <input className=" border p-2 mt-2 w-[90%] border-l-0 rounded-r" type="tel" value="8147587636" />
+                        <p className=" border p-2 rounded-l mt-2 w-[15%] border-r-0 ">+234</p>
+                        <input className=" border p-2 mt-2 w-[85%] border-l-0 rounded-r" type="tel" value="8147587636" />
 
                     </div>
                 </div>

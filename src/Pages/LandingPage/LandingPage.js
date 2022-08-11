@@ -40,7 +40,6 @@ const LandingPage = () => {
 
   return (
     <div className="overflow-x-hidden">
-
       <Header showInfo={openSignUpModal} />
       <Modal closeModal={closeModal} show={showSignUp || showLogin}>
         {showSignUp ? (

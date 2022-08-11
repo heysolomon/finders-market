@@ -1,11 +1,10 @@
 import footerlogo from '../../Assets/Images/finderslogo.png';
-// import social from '../../Assets/Images/social-1.svg';
-// import social2 from '../../Assets/Images/social-2.svg';
-// import social3 from '../../Assets/Images/social-3.svg';
-import Union from '../../Assets/Images/Union.svg';
+import social from '../../Assets/Images/social-1.svg';
+import social2 from '../../Assets/Images/social-2.svg';
+import social3 from '../../Assets/Images/social-3.svg';
 import keyboard from '../../Assets/Images/ic-keyboard-arrow-right-48px.svg';
 import { Link } from "react-router-dom";
-import footer from "./footer.module.css";
+import "./footer.css"
 
 const Footer = () => {
   const link = [
@@ -59,69 +58,43 @@ const Footer = () => {
   ];
   return (
     <div>
-      <div className={footer.container}>
-        <div className="flex justify-center shadow-sm px-6 py-4 items-center bg-white absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-3 rounded w-[65%]">
-          <h4 className="font-normal mr-2">Subscribe to our newsletter</h4>
-          {/* <form className="border-2 rounded border-gray-300 bg-white p-1">
-            <input
-              className={footer.footersearch}
-              type="email"
-              placeholder="Enter your email.."
-            />
-            <button className="p-3  rounded bg-[#7DD145] text-white ">
-              Subscribe Now
-            </button>
-          </form> */}
+      <div className='bg-[#4f7f19] pb-[150px]'>
+        <div className="footer-xs ">
+          <p className=' font-bold '>Subscribe to our newsletter</p>
+          <input className='p-2 max-w-[400px] w-[95%] m-auto rounded my-3 ' type="search" placeholder='Enter your email' />
+          <button className=' shadow-lg bg-[#7DD145] text-white p-2 max-w-[200px] text-[14px] sm:text-[16px] rounded w-[40%] m-auto'>Subscribe Now</button>
         </div>
-      </div>
-      <div className={footer.sub_footer}>
-        <div className={footer.left}>
-          <img src={footerlogo} alt="" style={{ width: "200px" }} />
-        </div>
-        <div className={footer.center}>
-          <nav className={footer.sub_center}>
-            <div className={footer.link}>
-              {link.map((link) => (
-                <Link className={footer.link} key={link.id} to={link.to}>
-                  {link.name}
-                </Link>
-              ))}
-            </div>
+        <div className=' flex justify-around py-10'>
+          <div className=' sm:flex text-white'>
+            {
+              link.map((items) => (
+                <p key={items.id} className=' sm:mx-5'>{items.name}</p>
+              ))
+            }
+          </div>
+          <div className=' text-white'>
+            {
+              navlink.map((items) => (
+                <p key={items.id}>{items.name}</p>
+              ))
+            }
 
-            <div className={footer.searchbar}>
-              <input
-                className={footer.text_input}
-                type="text"
-                placeholder="Search"
-              />
-              <img
-                src={Union}
-                style={{ width: "14px" }}
-                alt=""
-                className={footer.sear}
-              />
-            </div>
-          </nav>
-
-          <div className={footer.link}>
-            {navlink.map((navlink) => (
-              <Link className={footer.link} key={navlink.id} to="/LandingPage">
-                {navlink.name}
-              </Link>
-            ))}
           </div>
         </div>
-        <div className={footer.right}>
-          <div className={footer.sub_right}>
-            <img
-              className={footer.back_up}
-              src={keyboard}
-              alt=""
-              style={{ width: "20px" }}
-            />
+        <div className='flex '>
+          <img className=' w-40' src={footerlogo} alt='' />
+          <div className='flex justify-around  items-center mt-5 w-[40%] max-w-[200px] m-auto'>
+            <img src={social} alt='' />
+            <img src={social2} alt='' />
+            <img src={social3} alt='' />
           </div>
         </div>
+        <Link to="" className=' bg-white p-3 w-10 rounded float-right mx-5  animate-bounce'>
+          <img className=' ' src={keyboard} alt='' />
+        </Link>
       </div>
+
+
     </div>
   );
 };

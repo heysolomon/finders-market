@@ -37,10 +37,12 @@ import { Home } from "./Pages/dashboard/Home";
 import Transaction from "./Pages/dashboard/dashboardroutes/Transaction";
 import { useSelector } from "react-redux";
 import Settings from "./Pages/dashboard/dashboardroutes/Settings";
-import Details from "./Pages/dashboard/Settings/Details";
-import ChangePassword from "./Pages/dashboard/Settings/ChangePassword";
-import AddressPage from "./Pages/dashboard/Settings/AddressPage";
-import AddAddress from "./Pages/dashboard/Settings/AddAddress";
+import Details from "./Pages/dashboard/info/Details";
+import ChangePassword from "./Pages/dashboard/info/ChangePassword";
+import AddressPage from "./Pages/dashboard/info/AddressPage";
+import Orders from "./Pages/dashboard/info/Orders";
+import ActiveOrders from "./Pages/dashboard/info/ActiveOrders";
+import CloseOrder from "./Pages/dashboard/info/CloseOrder";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -130,8 +132,12 @@ function App() {
                 <Route path="Details" element={<Details />} />
                 <Route path="changepassword" element={<ChangePassword />} />
                 <Route path="address" element={<AddressPage />} />
-                <Route path="addaddress" element={<AddAddress />} />
-               
+          
+                <Route path="orders" element={<Orders />} >
+                  <Route path="" element={<ActiveOrders />} />
+                  <Route path="closeorder" element={<CloseOrder />} />
+                </Route>
+
 
                 <Route path="notifications" element={<NotificationPage />} />
               </Route>

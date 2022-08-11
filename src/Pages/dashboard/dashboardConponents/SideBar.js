@@ -3,8 +3,8 @@ import dash from "../../../Assets/Images/dashlogo.png";
 import truck from "../../../Assets/Images/truck.png";
 import farmer from "../../../Assets/Images/seedling.png";
 import storage from "../../../Assets/Images/warehouse.png";
-// import settings from "../../../Assets/Images/settings.png";
 import logo from '../../../Assets/Images/finderslogo.png'
+
 
 
 const Sidebar = (props) => {
@@ -44,28 +44,28 @@ const Sidebar = (props) => {
   const defaultacc = [
     {
       id: 1,
+      to: "/dashboard/orders",
+      name: "Orders",
+    },
+    {
+      id: 2,
       to: "/dashboard/details",
       name: "Details",
     },
     {
-      id: 2,
+      id: 3,
       to: "/dashboard/address",
       name: "Address Book",
     },
     {
-      id: 3,
+      id: 4,
       to: "/dashboard/changepassword",
       name: "Change Password",
-    },
-    {
-      id: 4,
-      to: "/dashboard/settings",
-      name: "Close Account",
     },
 
   ];
   return (
-    <div className=" h-full bg-[#4f7f19] fixed z-10 w-[20%]">
+    <div className="  h-full bg-[#4f7f19] fixed z-10 w-[20%]">
       <Link to="/"><img src={logo} alt="" width="200" /></Link>
       <nav className="mt-0">
         <div className="">

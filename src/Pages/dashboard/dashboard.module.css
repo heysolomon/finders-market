@@ -1,4 +1,9 @@
-.dashboard {
-    display: grid;
-    grid-template-columns: 17% 83%;
+
+
+@media screen and (min-width: 640px) {
+    .dashboard {
+        display: grid;
+        grid-template-columns: 17% 83%;
+    }
+    
 }

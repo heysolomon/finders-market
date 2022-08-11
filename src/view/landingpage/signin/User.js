@@ -11,6 +11,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import AuthButton from "../../../components/UI/Button/AuthButton";
 import { TextField } from "../../../components/UI/FormInput/TextField";
+import Fixed from "../../../components/Navbar/Fixed";
 
 const User = ({ showLogin, modal }) => {
   const inputs = [
@@ -147,7 +148,7 @@ const User = ({ showLogin, modal }) => {
   };
 
   return (
-    <div className="flex justify-center fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-20 bg-[white] max-h-[90%] rounded-xl">
+    <div className="flex mb-12 sm:mb-0 justify-center sm:fixed sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%] z-20 bg-[white] max-h-[90%] rounded-xl">
       <div className="w-[80%] m-[40px]">
         {/* error block */}
         {isError && (
@@ -161,8 +162,8 @@ const User = ({ showLogin, modal }) => {
             <p className="text-[#81d324] text-xs text-center">{message}</p>
           </div>
         )}
-        <div className="flex justify-between items-center mt-5">
-          <h2 className="text-[#4f7f19] text-md ">Create account</h2>
+        <div className="flex flex-col sm:flex-row sm:justify-between items-center mt-5">
+          <h2 className="text-[#4f7f19] text-md mr-5 sm:mr-0">Create account</h2>
           <p className="text-xs">
             Already have an account?
             <Link
@@ -202,7 +203,7 @@ const User = ({ showLogin, modal }) => {
         >
           {(formik) => (
             <Form className="my-5">
-              <div className="grid grid-cols-2 w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 w-full">
                 {inputs.map((input) => (
                   <TextField
                     key={input.id}
@@ -228,6 +229,7 @@ const User = ({ showLogin, modal }) => {
           )}
         </Formik>
       </div>
+      <Fixed />
     </div>
   );
 };

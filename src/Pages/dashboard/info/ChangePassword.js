@@ -1,5 +1,6 @@
 import Button from "../../../components/Button";
 import { motion } from 'framer-motion'
+import { Link } from "react-router-dom";
 
 
 
@@ -13,7 +14,7 @@ const ChangePassword = () => {
 
     ]
     return (
-        <div className=" pt-[100px] ml-10 bg-white  h-screen" >
+        <div className=" pt-[100px] sm:ml-10 bg-white  h-screen" >
             <motion.div
                 initial={{
                     y: -100,
@@ -23,10 +24,11 @@ const ChangePassword = () => {
                 }}
                 transition={{
                     duration: .5
-                }} className=" p-3 bg-white  border-b mb-5">
+                }} className=" p-3 bg-white flex justify-between border-b mb-5">
+                    <Link to="/dashboard" className=" sm:hidden">Back</Link>
                 <p>Change Password</p>
             </motion.div>
-            <form className=" w-[50%] m-auto">
+            <form className=" w-full max-w-[300px] sm:max-w-[500px] sm:w-[40%] m-auto">
                 {
                     password.map((password) => (
                         <InPut {...password} />

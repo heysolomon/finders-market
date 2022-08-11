@@ -14,7 +14,7 @@ export const Facility = ({openBookings}) => {
 // let navigate = useNavigate()
 
   return (
-    <div className="w-[95%] grid grid-cols-2 m-auto sm:grid-cols-4 gap-4">
+    <div className="w-[95%] sm:w-full overflow-x-hidden grid grid-cols-1 m-auto sm:grid-cols-4 gap-4">
       {facilities.map((item) => (
         <div key={item.id} className="  sm:mb-10 sm:mr-5 shadow-xl rounded-md">
           <div className="w-full">

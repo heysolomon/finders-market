@@ -1,0 +1,14 @@
+
+
+.footer-xs{
+    background: url("../../Assets/Images/footer.png") no-repeat center /cover;
+    padding:  20px;
+    display:  flex;
+    flex-direction:  column;
+    justify-content: center;
+    padding-bottom: 60px;
+
+}
+.footer-xs p {
+    text-align:  center;
+}
