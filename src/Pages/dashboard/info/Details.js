@@ -57,7 +57,7 @@ const Details = () => {
                 </div>
                 <div className=" flex flex-col">
                     <label>Gender (optional)</label>
-                    <select className=" flex items-center w-full border p-2 focus:outline-none">
+                    <select className=" bg-white text-black flex items-center w-full border p-2 focus:outline-none">
                         <option>Please select</option>
                         <option>Male</option>
                         <option>Female</option>
@@ -65,7 +65,7 @@ const Details = () => {
                 </div>
                 <div>
                     <label>Select a date</label>
-                        <input className=" flex items-center w-full border p-2 focus:outline-none" type="date"  />
+                        <input className="bg-white text-black flex items-center w-full border p-2 focus:outline-none" type="date"  />
                 </div>
 
                 <div className=" col-span-2 mt-4">

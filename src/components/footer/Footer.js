@@ -61,7 +61,7 @@ const Footer = () => {
       <div className='bg-[#4f7f19] pb-[150px]'>
         <div className="footer-xs ">
           <p className=' font-bold '>Subscribe to our newsletter</p>
-          <input className='p-2 max-w-[400px] w-[95%] m-auto rounded my-3 ' type="search" placeholder='Enter your email' />
+          <input className='p-2 max-w-[400px] w-[95%] m-auto rounded-md my-3 ' type="search" placeholder='Enter your email' />
           <button className=' shadow-lg bg-[#7DD145] text-white p-2 max-w-[200px] text-[14px] sm:text-[16px] rounded w-[40%] m-auto'>Subscribe Now</button>
         </div>
         <div className=' flex justify-around py-10'>

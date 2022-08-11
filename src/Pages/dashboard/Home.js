@@ -229,7 +229,7 @@ const Mobile = () => {
     <div className='sm:hidden'>
       <div className='  pt-[80px] px-5'>
         <div className='p-2 border-b-2 my-2'>
-          <p>Your Findes Market Account</p>
+          <p>My Finders Market Account</p>
         </div>
         <motion.div
           initial={{
@@ -278,7 +278,7 @@ const Mobile = () => {
             ))
           }
         </motion.div>
-        <p className='mt-5'>Personal Infomation</p>
+        <p className='mt-5'>MY SETTINGS</p>
         <div className=' mt-5'>
          <motion.div
                    initial={{
