@@ -9,6 +9,11 @@ module.exports = {
       fontFamily: {
         'sans': ['Poppins', 'sans-serif', ...defaultTheme.fontFamily.sans],
       },
+      boxShadow: {
+        large: [
+          "8px 5px 4px 0px #00000040"
+        ]
+      }
     },
   },
   plugins: [],

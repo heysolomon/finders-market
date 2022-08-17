@@ -47,7 +47,7 @@ export const Facilities = () => {
       )}
       {showBookings && (
         <Modal closeModal={closeModal}>
-          <StorageBooking />
+          <StorageBooking showBooking={openBookings} />
         </Modal>
       )}
       <div className="max-w-[1040px] m-auto w-full mt-[80px]">
